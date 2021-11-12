@@ -4,7 +4,7 @@ on:
     types: [closed]
 jobs:
   jobOne:
-    if: github.event.pull_request.merged == true && ${GITHUB_BASE_REF} == 'main'
+    if: github.event.pull_request.merged == true && github.base_ref == 'main'
     runs-on: ubuntu-latest
     steps:
       - name: Set Branch Name
