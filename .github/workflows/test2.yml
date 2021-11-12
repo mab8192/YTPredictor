@@ -6,4 +6,4 @@ jobs:
   myEvent:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ github.event.client_payload.ref }}
+      - run: echo ${{ github.event.client_payload.src_branch }}

@@ -1,15 +1,17 @@
 name: Dispatch Event
 on:
   pull_request:
-    types: [opened]
 jobs:
   jobOne:
     runs-on: ubuntu-latest
     steps:
+      - name: Test Commands
+        run: |
+          echo "${GITHUB_REF##*/}"
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v1
         with:
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
           repository: mab8192/YTPredictor
           event-type: dev-deploy
-          client-payload: '{"ref": "${{ env.GITHUB_HEAD_REF }}"}'
+          client-payload: '{"src_branch": "${GITHUB_REF##*/}"}'
