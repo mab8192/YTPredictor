@@ -8,6 +8,8 @@ jobs:
       - name: Test Commands
         run: |
           echo "${GITHUB_REF##*/}"
+          echo "${GITHUB_HEAD_REF}"
+          echo "${GITHUB_BASE_REF}"
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v1
         with:
