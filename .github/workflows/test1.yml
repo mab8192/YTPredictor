@@ -1,4 +1,4 @@
-name: Repository Dispatch
+name: Dispatch Event
 on:
   pull_request:
     types: [opened]
