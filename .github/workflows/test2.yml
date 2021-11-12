@@ -1,0 +1,9 @@
+name: Repository Dispatch
+on:
+  repository_dispatch:
+    types: [dev-deploy]
+jobs:
+  myEvent:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.event.client_payload.ref }}
