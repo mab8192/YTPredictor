@@ -1,0 +1,14 @@
+name: Development Deployment
+on:
+  repository_dispatch:
+    types: [dev-deploy]
+jobs:
+  UnitTests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Re-tag `staging` as `dev`
+        run: echo "Tagged staging as dev"
+      - name: Rename docker compose file
+        run: echo "Renamed file"
+      - name: Deploy to EB
+        run: echo "Deployed!"
