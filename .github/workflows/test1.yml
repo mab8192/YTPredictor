@@ -12,4 +12,4 @@ jobs:
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
           repository: mab8192/YTPredictor
           event-type: dev-deploy
-          client-payload: '{"ref": "${{ github.ref }}"}'
+          client-payload: '{"ref": "${{ env.GITHUB_HEAD_REF }}"}'
