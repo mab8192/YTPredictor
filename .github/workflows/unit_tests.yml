@@ -1,0 +1,28 @@
+name: Unit Tests
+on:
+  pull_request:
+    types: [synchronize]
+  repository_dispatch:
+    types: [unit-tests]
+jobs:
+  UnitTests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set Branch Name on PR
+        id: vars_pr
+        run: echo ::set-output name=branch::${GITHUB_HEAD_REF}
+        if: github.event_name == 'pull_request'
+      - name: Set Branch Name on Dispatch
+        id: vars_dispatch
+        run: echo ::set-output name=branch::${{ github.event.client_payload.ref }}
+        if: github.event_name == 'repository_dispatch'
+      - name: Pull image from ECR on Dispatch
+        if: github.event_name == 'repository_dispatch'
+        run: echo "Pulled image tagged with branch name ${{ steps.vars_dispatch.outputs.branch }}"
+      - name: Pull image from ECR on PR push
+        if: github.event_name == 'pull_request'
+        run: echo "Pulled image tagged with branch name ${{ steps.vars_pr.outputs.branch }}"
+      - name: Re-tag image as local
+        run: echo "Tagged image as local."
+      - name: Run Tests
+        run: echo "Tests Passed!"
