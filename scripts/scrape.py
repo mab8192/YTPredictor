@@ -1,6 +1,8 @@
 import os
 import sys
 from argparse import ArgumentParser
+from selenium import webdriver
+import time
 
 
 parser = ArgumentParser(description="Scrape YouTube for data.")
@@ -20,14 +22,27 @@ def load_search_file(path):
     return terms
 
 
-def get_search_results(query):
-    # Can't use beautifulsoup, try selenium or scrapy or something
-    pass
+def get_search_results(browser: webdriver.Chrome, query: str):
+    url = "https://www.youtube.com/results?search_query={}&sp=CAMSBAgDEAE%253D".format(query)
+    browser.get(url)
+
+    for _ in range(4):
+        browser.execute_script("window.scrollBy(0, 1080);")
+        time.sleep(1)
+
+    elts = browser.find_elements_by_css_selector("ytd-video-renderer")
+    for elt in elts:
+        print(elt)
+        link = elt.find_element_by_id("thumbnail").get_property("href")
+        video_id = link.split("?v=")[1]
+        break
 
 
 def scrape(search_terms, output_dir):
+    browser = webdriver.Chrome(executable_path="./chromedriver.exe")
+
     for term in search_terms:
-        seaerch_results = get_search_results(term)
+        seaerch_results = get_search_results(browser, term)
         break
 
 
