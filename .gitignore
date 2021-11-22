@@ -130,3 +130,8 @@ dmypy.json
 
 # Miscellaneous
 chromedriver.exe
+
+# Additional ignore for final project, maybe we want to remove these
+*.jpg
+*.json
+*youtube_api/config.py
