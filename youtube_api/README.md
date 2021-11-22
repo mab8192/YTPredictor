@@ -11,8 +11,8 @@ was used for sanitation/validation purposes.
 cd <path_to_project>
 # only run this if you don't have a venv setup
 virtualenv venv  
-# make sure the requirements are installed,  `google-api-python-client` is listed there
 . venv/bin/activate
+# make sure the requirements are installed,  `google-api-python-client` is listed there
 pip install -r requirements.txt
 mkdir -p ./youtube_api/thumbnails
 touch ./youtube_api/data.json
@@ -21,7 +21,6 @@ touch ./youtube_api/data.json
 ## API Key
 You can get an API key by going [here](https://developers.google.com/youtube/v3/getting-started)
 and following instructions 1 - 3. I did not do the OAuth portion. Once you have an API key,
-just hard set the `AUTH_KEY` value in `scrape_youtube.py` or whatever you want. Then
 change to the `youtube_api/` directory and run
 ```bash
 echo "AUTH_KEY = <INSERT_API_KEY_HERE>" > ./config.py
