@@ -23,7 +23,7 @@ and following instructions 1 - 3. I did not do the OAuth portion. Once you have 
 just hard set the `AUTH_KEY` value in `scrape_youtube.py` or whatever you want. Then
 change to the `youtube_api/` directory and run
 ```bash
-cat "AUTH_KEY = <INSERT_API_KEY_HERE>" > ./config.py
+echo "AUTH_KEY = <INSERT_API_KEY_HERE>" > ./config.py
 ```
 
 ## Running
