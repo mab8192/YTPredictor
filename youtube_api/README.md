@@ -12,6 +12,7 @@ cd <path_to_project>
 # only run this if you don't have a venv setup
 virtualenv venv  
 # make sure the requirements are installed,  `google-api-python-client` is listed there
+. venv/bin/activate
 pip install -r requirements.txt
 mkdir -p ./youtube_api/thumbnails
 touch ./youtube_api/data.json
