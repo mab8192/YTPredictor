@@ -27,7 +27,7 @@ def search_videos(next_page=None, start_date=None, end_date=None):
     Search videos using YouTubes RESTful api, calling the 'search' endpoint
     """
     search = service.search()
-    search_params = {'part': 'snippet', 'maxResults': 50, 'type': 'video'}
+    search_params = {'part': 'snippet', 'maxResults': 50, 'type': 'video', 'relevanceLanguage': 'en'}
     if next_page:
         search_params['pageToken'] = next_page
     if start_date:
@@ -111,7 +111,8 @@ def get_data():
             pull_thumbnails(page_data)
             if not hours:
                 raise ValueError(f'End of day reached. Terminating to maintain 7-day term.')
-            start_date, end_date = get_time_slices(hours.pop())
+            if next_page is None:
+                start_date, end_date = get_time_slices(hours.pop())
             time.sleep(3)  # sleep to avoid potential api calls / sec quota limits
     except Exception as e:
         print(f'The following error occurred while gathering data: {e}')
