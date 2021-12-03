@@ -12,6 +12,7 @@ class ViewCountPredictor(nn.Module):
         self.image_fe = ImageFeatureExtractor(n_img_features)
         self.title_fe = TitleFeatureExtractor(n_title_features)
 
+        # Starting with a single linear layer to check that everything works
         self.regression_model = nn.Linear(n_img_features + n_title_features, 1)
 
     def forward(self, image, title):
@@ -20,4 +21,4 @@ class ViewCountPredictor(nn.Module):
 
         feats = torch.cat(img_feats, title_feats)
 
-        views_pred = self.regression_model(feats)
+        return self.regression_model(feats)
