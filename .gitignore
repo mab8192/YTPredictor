@@ -135,3 +135,4 @@ chromedriver.exe
 *.jpg
 *.json
 *youtube_api/config.py
+dev.ipynb
