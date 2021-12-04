@@ -11,3 +11,9 @@ if(data is not None):
             if (f is None):
                 print("image not found for associated data. KEY: " + key + " image: " + key + ".jpg" )
                 exit()
+    datafiltered = {x: y for x, y in data.items() if y['title'].isascii()}
+    with open('datafiltered.json', 'w') as f:
+        json.dump(datafiltered, f)
+    
+    print(len(data))
+    print(len(datafiltered))
