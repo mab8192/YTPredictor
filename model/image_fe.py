@@ -27,11 +27,19 @@ class ImageFeatureExtractor:
         return self.forward(*args, **kwargs)
 
 
+def get_model(model='resnet18'):
+    if model not in model_set:
+        raise ValueError(f'Model "{model}" is not a valid pre-trained model')
+    model = getattr(models, model)(pretrained=True)
+    model.eval()
+    return model
+
+
 if __name__ == '__main__':
     from torchsummary import summary
     from YTPredictor import ThumbnailDataset
     from YTPredictor.model.yt_transformers import data_transforms
-    my_model = ImageFeatureExtractor()
+    my_model = get_model()
     summary(my_model, (3, 224, 224))
     data = ThumbnailDataset(root='/home/corbin/Desktop/school/fall2021/deep/final_project/YTPredictor/youtube_api/',
                             transforms=data_transforms['train'])
