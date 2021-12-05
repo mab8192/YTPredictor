@@ -38,11 +38,11 @@ def get_model(model='resnet18'):
 if __name__ == '__main__':
     from torchsummary import summary
     from YTPredictor import ThumbnailDataset
-    from YTPredictor.model.yt_transformers import data_transforms
+    from YTPredictor.model.yt_transformers import image_transforms
     my_model = get_model()
     summary(my_model, (3, 224, 224))
     data = ThumbnailDataset(root='/home/corbin/Desktop/school/fall2021/deep/final_project/YTPredictor/youtube_api/',
-                            transforms=data_transforms['train'])
+                            transforms=image_transforms['train'])
     img = data[0][0].reshape((1, *data[0][0].shape))
     print(f'{img.shape=}')
     feature = my_model(img)

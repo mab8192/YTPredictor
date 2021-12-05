@@ -7,7 +7,7 @@ from PIL import Image
 
 
 class ThumbnailDataset(torch.utils.data.Dataset):
-    def __init__(self, root, transforms) -> None:
+    def __init__(self, root, transforms=lambda x: x) -> None:
         super().__init__()
 
         self.root = root
