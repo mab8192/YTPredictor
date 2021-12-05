@@ -7,11 +7,11 @@ from title_fe import TitleFeatureExtractor
 
 
 class ViewCountPredictor(nn.Module):
-    def __init__(self, n_img_features, n_title_features) -> None:
+    def __init__(self, n_img_features, n_title_features, img_model='resnet18', title_model='bert') -> None:
         super().__init__()
 
-        self.image_fe = ImageFeatureExtractor()
-        self.title_fe = TitleFeatureExtractor()
+        self.image_fe = ImageFeatureExtractor(model=img_model)
+        self.title_fe = TitleFeatureExtractor(model=title_model)
 
         # Starting with a single linear layer to check that everything works
         self.regression_model = nn.Linear(n_img_features + n_title_features, 1)
