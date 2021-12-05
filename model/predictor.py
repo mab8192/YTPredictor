@@ -1,9 +1,7 @@
-import torch
-import torch.nn as nn
-from torch.nn import functional as F
-
 from image_fe import ImageFeatureExtractor
 from title_fe import TitleFeatureExtractor
+import torch.nn as nn
+import torch
 
 
 class ViewCountPredictor(nn.Module):

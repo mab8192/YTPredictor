@@ -15,9 +15,9 @@ models = {'ibert', 'layoutlm', 'mbart', 'm2m_100', 'openai-gpt', 'distilbert', '
 class TitleFeatureExtractor:
     def __init__(self, model='bert') -> None:
         if model not in models:
-            raise ValueError(f'Model "model" is not in model set')
+            raise ValueError(f'Model "{model}" is not in model set')
         self.yt_model = AutoModel.from_pretrained(f'{model}-base-uncased')
-        self.yt_transform = TitleTransform()
+        self.yt_transform = TitleTransform(model)
 
     def __getattribute__(self, item):
         try:
