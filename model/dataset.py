@@ -14,7 +14,7 @@ class ThumbnailDataset(torch.utils.data.Dataset):
         self.transforms = transforms
 
         self.imgs = list(sorted(os.listdir(os.path.join(root, "thumbnails"))))
-        self.video_data = json.load(open(os.path.join(root, "data.json")))
+        self.video_data = json.load(open(os.path.join(root, "datafiltered.json")))
 
 
     def __getitem__(self, idx):
@@ -25,4 +25,7 @@ class ThumbnailDataset(torch.utils.data.Dataset):
         img = Image.open(img_path).convert("RGB")
         img = self.transforms(img)
 
-        return img, data
+        return img, (data['title'] if data['title'] else data['description']), float(data.get('viewCount', 0.))
+
+    def __len__(self):
+        return len(self.imgs)

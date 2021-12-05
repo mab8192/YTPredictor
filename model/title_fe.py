@@ -1,8 +1,9 @@
 from YTPredictor.model.yt_transformers import TitleTransform
 from transformers import AutoModel
+import torch.nn as nn
 
 
-models = {'ibert', 'layoutlm', 'mbart', 'm2m_100', 'openai-gpt', 'distilbert', 'clip', 'gpt2', 'flaubert', 'mobilebert',
+model_set = {'ibert', 'layoutlm', 'mbart', 'm2m_100', 'openai-gpt', 'distilbert', 'clip', 'gpt2', 'flaubert', 'mobilebert',
           'ctrl', 'sew-d', 'gpt_neo', 'lxmert', 'visual_bert', 'unispeech', 'wav2vec2', 'xlm', 'fnet', 'rembert',
           'convbert', 'roberta', 'roformer', 'segformer', 'bart', 'deberta-v2', 'blenderbot', 'blenderbot-small',
           'luke', 'mt5', 'pegasus', 'xlnet', 'reformer', 'unispeech-sat', 'sew', 'bigbird_pegasus', 'transfo-xl',
@@ -12,27 +13,26 @@ models = {'ibert', 'layoutlm', 'mbart', 'm2m_100', 'openai-gpt', 'distilbert', '
           'bert', 'megatron-bert', 'detr'}
 
 
-class TitleFeatureExtractor:
-    def __init__(self, model='bert') -> None:
-        if model not in models:
-            raise ValueError(f'Model "{model}" is not in model set')
-        self.yt_model = AutoModel.from_pretrained(f'{model}-base-uncased')
-        self.yt_transform = TitleTransform(model)
+class TitleFeatureExtractor(nn.Module):
+    def __init__(self, model_name='bert', fine_tune=False) -> None:
+        super().__init__()
+        assert model_name in model_set, f'Model "{model_name}" is not a valid pre-trained model'
+        self.model = AutoModel.from_pretrained(f'{model_name}-base-uncased')
+        self.model.eval()
+        self.title_transform = TitleTransform(model_name)
+        self.output_shape = tuple(self('sample text').shape[1:])
+        if fine_tune:
+            self.model.train()
 
-    def __getattribute__(self, item):
-        try:
-            return object.__getattribute__(object.__getattribute__(self, 'yt_model'), item)
-        except AttributeError:
-            return object.__getattribute__(self, item)
-
-    def __call__(self, *args, **kwargs):
-        return self.yt_model.forward(**self.yt_transform(*args, **kwargs))['pooler_output']
+    def forward(self, input):
+        return self.model.forward(**self.title_transform(input))['pooler_output']  # using last_hidden_state produces variable output sizes
 
 
 if __name__ == '__main__':
+    import pathlib
     from YTPredictor import ThumbnailDataset
     my_model = TitleFeatureExtractor()
-    data = ThumbnailDataset(root='/home/corbin/Desktop/school/fall2021/deep/final_project/YTPredictor/youtube_api/')
+    data = ThumbnailDataset(root=str(pathlib.Path(__file__).parent.resolve()) + '/../youtube_api/')
     txt = data[0][1]['title']
     print(f'{txt=}')
     feature = my_model(txt)
