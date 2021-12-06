@@ -14,8 +14,9 @@ model_set = {'efficientnet_b2', 'shufflenet', 'regnet_x_32gf', 'efficientnet_b4'
 
 
 class ImageFeatureExtractor(nn.Module):
-    def __init__(self, model_name='resnet18', fine_tune=False):
+    def __init__(self, model_name='resnet18', fine_tune=False, dtype=torch.double):
         super().__init__()
+        self.dtype = dtype
         assert model_name in model_set, f'Model "{model_name}" is not a valid pre-trained model'
         pretrained_model = getattr(models, model_name)(pretrained=True)
         self.model = nn.Sequential(*list(pretrained_model.children())[: -1])  # Chop off last classifier layer
@@ -25,7 +26,7 @@ class ImageFeatureExtractor(nn.Module):
             self.model.train()
 
     def forward(self, x):
-        return self.model(x)
+        return self.model(x).type(self.dtype)
 
 
 if __name__ == '__main__':

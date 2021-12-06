@@ -1,6 +1,7 @@
 from YTPredictor.model.yt_transformers import TitleTransform
 from transformers import AutoModel
 import torch.nn as nn
+import torch
 
 
 model_set = {'ibert', 'layoutlm', 'mbart', 'm2m_100', 'openai-gpt', 'distilbert', 'clip', 'gpt2', 'flaubert', 'mobilebert',
@@ -14,8 +15,9 @@ model_set = {'ibert', 'layoutlm', 'mbart', 'm2m_100', 'openai-gpt', 'distilbert'
 
 
 class TitleFeatureExtractor(nn.Module):
-    def __init__(self, model_name='bert', fine_tune=False) -> None:
+    def __init__(self, model_name='bert', fine_tune=False, dtype=torch.double) -> None:
         super().__init__()
+        self.dtype = dtype
         assert model_name in model_set, f'Model "{model_name}" is not a valid pre-trained model'
         self.model = AutoModel.from_pretrained(f'{model_name}-base-uncased')
         self.model.eval()
@@ -25,7 +27,7 @@ class TitleFeatureExtractor(nn.Module):
             self.model.train()
 
     def forward(self, input):
-        return self.model.forward(**self.title_transform(input))['pooler_output']  # using last_hidden_state produces variable output sizes
+        return self.model.forward(**self.title_transform(list(input), padding=True))['pooler_output'].type(self.dtype)  # using last_hidden_state produces variable output sizes
 
 
 if __name__ == '__main__':
@@ -33,7 +35,7 @@ if __name__ == '__main__':
     from YTPredictor import ThumbnailDataset
     my_model = TitleFeatureExtractor()
     data = ThumbnailDataset(root=str(pathlib.Path(__file__).parent.resolve()) + '/../youtube_api/')
-    txt = data[0][1]['title']
+    txt = data[0][1]
     print(f'{txt=}')
-    feature = my_model(txt)
+    feature = my_model([txt,])
     print(f'{feature.shape=}')

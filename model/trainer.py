@@ -24,16 +24,17 @@ class Trainer:
 
     def train(self):
         # sample minibatch data
-        iter_per_epoch = math.ceil(self.data_length // self.batch_size)
         self.model.train()
         for i in range(self.epochs):
             start_t = time.time()
-            for j, images, captions, views in enumerate(self.loader):
-                loss = self.model(images, captions, views)
+            for j, data in enumerate(self.loader):
+                images, captions, views = data
+                loss = self.model.loss(images, captions, views)
                 self.optimizer.zero_grad()
                 loss.backward()
                 self.loss_history.append(loss.item())
                 self.optimizer.step()
+                print('(Iteration {} / {}) loss: {:.4f}'.format(j, self.data_length // self.batch_size, loss.item()))
             end_t = time.time()
             print('(Epoch {} / {}) loss: {:.4f} time per epoch: {:.1f}s'.format(i, self.epochs, loss.item(), end_t-start_t))
         if self.scheduler:
