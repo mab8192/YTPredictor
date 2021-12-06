@@ -27,7 +27,8 @@ class TitleFeatureExtractor(nn.Module):
             self.model.train()
 
     def forward(self, input):
-        return self.model.forward(**self.title_transform(list(input), padding=True))['pooler_output'].type(self.dtype)  # using last_hidden_state produces variable output sizes
+        with torch.no_grad():
+            return self.model.forward(**self.title_transform(list(input), padding=True))['pooler_output'].type(self.dtype)  # using last_hidden_state produces variable output sizes
 
 
 if __name__ == '__main__':
