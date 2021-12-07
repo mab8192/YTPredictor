@@ -3,12 +3,13 @@ from datetime import timedelta as td
 from datetime import datetime as dt
 import requests
 import random
+from config import AUTH_KEY
 import time
 import json
 
 
 # service instance is a helpful client wrapper of requests specifically built for YouTubes RESTful API v3 endpoints
-service = build('youtube', 'v3', developerKey='AIzaSyAWfn0yU9FzpKdZlv-xea0eqfyLTDmw5NA')
+service = build('youtube', 'v3', developerKey=AUTH_KEY)
 THUMBNAIL_SIZE = 'default'  # possible options are 'default' for 120x90, 'medium' for 320x180, 'high' for 480x360
 
 
