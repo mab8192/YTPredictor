@@ -1,7 +1,6 @@
+import torch
 import torchvision.models as models
 from torch import nn
-import torch
-
 
 # models chosen from here https://pytorch.org/vision/stable/models.html
 
@@ -31,11 +30,11 @@ class ImageFeatureExtractor(nn.Module):
 
 if __name__ == '__main__':
     import pathlib
-    from torchsummary import summary
-    from YTPredictor import ThumbnailDataset
-    from YTPredictor.model.yt_transformers import image_transforms
+
+    from model.dataset import ThumbnailDataset
+    from model.yt_transformers import image_transforms
     my_model = ImageFeatureExtractor()
-    summary(my_model, (3, 224, 224))
+
     data = ThumbnailDataset(root=str(pathlib.Path(__file__).parent.resolve()) + '/../youtube_api/',
                             transforms=image_transforms['train'])
     img = data[0][0].reshape((1, *data[0][0].shape))

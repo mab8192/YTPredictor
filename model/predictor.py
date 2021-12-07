@@ -1,13 +1,14 @@
-from image_fe import ImageFeatureExtractor
-from title_fe import TitleFeatureExtractor
-import torch.nn.functional as F
-import torch.nn as nn
 import numpy as np
 import torch
+import torch.nn as nn
+import torch.nn.functional as F
+
+from model.image_fe import ImageFeatureExtractor
+from model.title_fe import TitleFeatureExtractor
 
 
 class ViewCountPredictor(nn.Module):
-    def __init__(self, n_img_features, n_title_features, img_model='resnet18', title_model='bert', dtype=torch.double) -> None:
+    def __init__(self, img_model='resnet18', title_model='bert', dtype=torch.double) -> None:
         super().__init__()
         self.dtype = dtype
         self.image_fe = ImageFeatureExtractor(model_name=img_model, dtype=dtype)
@@ -39,9 +40,10 @@ class ViewCountPredictor(nn.Module):
 
 if __name__ == '__main__':
     import pathlib
-    from YTPredictor.model.yt_transformers import image_transforms
-    from YTPredictor import ThumbnailDataset
-    my_model = ViewCountPredictor(1000, 768)
+
+    from dataset import ThumbnailDataset
+    from model.yt_transformers import image_transforms
+    my_model = ViewCountPredictor()
     data = ThumbnailDataset(root=str(pathlib.Path(__file__).parent.resolve()) + '/../youtube_api/',
                             transforms=image_transforms['train'])
     feature = my_model(data[0][0].reshape((1, *data[0][0].shape)), data[0][1])

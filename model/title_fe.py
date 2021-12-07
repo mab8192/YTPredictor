@@ -1,4 +1,4 @@
-from YTPredictor.model.yt_transformers import TitleTransform
+from model.yt_transformers import TitleTransform
 from transformers import AutoModel
 import torch.nn as nn
 import torch
@@ -27,13 +27,12 @@ class TitleFeatureExtractor(nn.Module):
             self.model.train()
 
     def forward(self, input):
-        with torch.no_grad():
-            return self.model.forward(**self.title_transform(list(input), padding=True))['pooler_output'].type(self.dtype)  # using last_hidden_state produces variable output sizes
+        return self.model.forward(**self.title_transform(list(input), padding=True))['pooler_output'].type(self.dtype)  # using last_hidden_state produces variable output sizes
 
 
 if __name__ == '__main__':
     import pathlib
-    from YTPredictor import ThumbnailDataset
+    from model.dataset import ThumbnailDataset
     my_model = TitleFeatureExtractor()
     data = ThumbnailDataset(root=str(pathlib.Path(__file__).parent.resolve()) + '/../youtube_api/')
     txt = data[0][1]

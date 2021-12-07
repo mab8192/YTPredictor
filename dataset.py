@@ -12,7 +12,7 @@ class ThumbnailDataset(torch.utils.data.Dataset):
         self.root = root
         self.transforms = transforms
         self.imgs = list(sorted(os.listdir(os.path.join(root, "thumbnails"))))
-        self.video_data = json.load(open(os.path.join(root, "datafiltered.json")))
+        self.video_data = json.load(open(os.path.join(root, "data.json")))
         self.clean_data()
 
     def __getitem__(self, idx):
@@ -47,6 +47,6 @@ class ThumbnailDataset(torch.utils.data.Dataset):
 
 
 if __name__ == '__main__':
-    from YTPredictor.model.yt_transformers import image_transforms
+    from model.yt_transformers import image_transforms
     data = ThumbnailDataset(root=str(pathlib.Path(__file__).parent.resolve()) + '/../youtube_api/',
                             transforms=image_transforms['train'])
