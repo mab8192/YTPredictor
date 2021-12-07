@@ -9,7 +9,7 @@ model_set = {'efficientnet_b2', 'shufflenet', 'regnet_x_32gf', 'efficientnet_b4'
              'regnet_y_8gf', 'vgg16', 'efficientnet_b6', 'resnext50_32x4d', 'efficientnet_b0', 'regnet_y_32gf',
              'googlenet', 'mobilenet_v3_small', 'regnet_y_800mf', 'regnet_x_8gf', 'alexnet', 'densenet',
              'regnet_y_400mf', 'wide_resnet50_2', 'regnet_x_1_6gf', 'mnasnet', 'mobilenet_v3_large', 'efficientnet_b1',
-             'squeezenet', 'efficientnet_b5', 'regnet_x_400mf', 'regnet_x_800mf', 'inception', 'mobilenet_v2'}
+             'squeezenet', 'efficientnet_b5', 'regnet_x_400mf', 'regnet_x_800mf', 'inception', 'mobilenet_v2', 'resnet101'}
 
 
 class ImageFeatureExtractor(nn.Module):
@@ -31,7 +31,7 @@ class ImageFeatureExtractor(nn.Module):
 if __name__ == '__main__':
     import pathlib
 
-    from model.dataset import ThumbnailDataset
+    from dataset import ThumbnailDataset
     from model.yt_transformers import image_transforms
     my_model = ImageFeatureExtractor()
 

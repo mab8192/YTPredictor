@@ -4,9 +4,19 @@ import torch
 from PIL import Image
 import pathlib
 
+from torchvision.transforms import transforms
+
+
+DEFAULT_TRANSFORMS = transforms.Compose([
+    transforms.Resize(256),
+    transforms.CenterCrop(224),
+    transforms.ToTensor(),
+    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+])
+
 
 class ThumbnailDataset(torch.utils.data.Dataset):
-    def __init__(self, root, transforms=lambda x: x) -> None:
+    def __init__(self, root, transforms=DEFAULT_TRANSFORMS) -> None:
         super().__init__()
 
         self.root = root
