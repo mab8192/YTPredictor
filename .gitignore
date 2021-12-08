@@ -137,3 +137,4 @@ chromedriver.exe
 *youtube_api/config.py
 dev.ipynb
 model_checkpoints
+.idea
