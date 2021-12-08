@@ -12,7 +12,7 @@ class ViewCountPredictor(nn.Module):
         super().__init__()
         self.dtype = dtype
         self.device = device
-        self.image_fe = ImageFeatureExtractor(model_name=img_model, dtype=dtype)
+        self.image_fe = ImageFeatureExtractor(model_name=img_model, dtype=dtype, device=self.device)
         self.title_fe = TitleFeatureExtractor(model_name=title_model, dtype=dtype)
         self.input_size = np.prod(self.image_fe.output_shape) + np.prod(self.title_fe.output_shape)
         # we need to reduce dimensions of image and title features to be passable to regression layer
@@ -21,21 +21,22 @@ class ViewCountPredictor(nn.Module):
 
         # Starting with a single linear layer to check that everything works
         self.regression_model = nn.Sequential(
-            # nn.Linear(np.prod(self.image_fe.output_shape) + np.prod(self.title_fe.output_shape), 1, dtype=self.dtype),
             nn.BatchNorm1d(self.input_size, dtype=self.dtype, device=self.device),
-            nn.Linear(self.input_size, 256, dtype=self.dtype, device=self.device),
-            nn.Dropout(0.5),
-            nn.ReLU(),
-            nn.Linear(256, 1, dtype=self.dtype, device=self.device),
-            nn.Dropout(0.5)
+            nn.Linear(self.input_size, 1, dtype=self.dtype, device=self.device),
+            # nn.Linear(self.input_size, 256, dtype=self.dtype, device=self.device),
+            # nn.Dropout(0.5),
+            # nn.ReLU(),
+            # nn.Linear(256, 1, dtype=self.dtype, device=self.device),
+            # nn.Dropout(0.75),
+            nn.ReLU()
         )
 
     def forward(self, image, title):
-        img_feats = self.image_fe(image)
-        title_feats = self.title_fe(title)
-        img_feats = self.flatten(img_feats)
-        title_feats = self.flatten(title_feats)
-        feat = torch.cat((img_feats, title_feats), dim=1)
+        img_feats = self.image_fe(image).to(device=self.device, dtype=self.dtype)
+        title_feats = self.title_fe(title).to(device=self.device, dtype=self.dtype)
+        img_feats = self.flatten(img_feats).to(device=self.device, dtype=self.dtype)
+        title_feats = self.flatten(title_feats).to(device=self.device, dtype=self.dtype)
+        feat = torch.cat((img_feats, title_feats), dim=1).to(device=self.device, dtype=self.dtype)
         return self.regression_model(feat)
 
     def loss(self, image, title, views):

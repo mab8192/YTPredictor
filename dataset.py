@@ -3,7 +3,7 @@ import os
 import torch
 from PIL import Image
 import pathlib
-
+import math
 from torchvision.transforms import transforms
 
 
@@ -23,6 +23,7 @@ class ThumbnailDataset(torch.utils.data.Dataset):
         self.transforms = transforms
         self.imgs = list(sorted(os.listdir(os.path.join(root, "thumbnails"))))
         self.video_data = json.load(open(os.path.join(root, "data.json")))
+        self.max_label = None
         self.clean_data()
 
     def __getitem__(self, idx):
@@ -33,7 +34,7 @@ class ThumbnailDataset(torch.utils.data.Dataset):
         img = Image.open(img_path).convert("RGB")
         img = self.transforms(img)
 
-        return img, (data['title'] if data['title'] else data['description']), data.get('viewCount', 0.)
+        return video_id, img, (data['title'] if data['title'] else data['description']), data.get('viewCount', 0.)
 
     def __len__(self):
         return len(self.imgs)
@@ -43,6 +44,7 @@ class ThumbnailDataset(torch.utils.data.Dataset):
         vid_keys = {x.split('.jpg')[0] for x in self.imgs}
         max_count = max(self.video_data, key=lambda x: int(self.video_data[x].get('viewCount', 0)))
         max_count = float(self.video_data[max_count]['viewCount'])
+        self.max_label = max_count # math.sqrt(max_count)
         for key in self.video_data:
             if key not in vid_keys:
                 bad_keys.add(key)
@@ -53,7 +55,7 @@ class ThumbnailDataset(torch.utils.data.Dataset):
             if 'viewCount' not in self.video_data[key]:
                 bad_keys.add(key)
                 continue
-            self.video_data[key]['viewCount'] = float(self.video_data[key]['viewCount']) / max_count
+            self.video_data[key]['viewCount'] = float(self.video_data[key]['viewCount']) / self.max_label
         for key in bad_keys:
             self.video_data.pop(key)
             self.imgs.remove(f'{key}.jpg')

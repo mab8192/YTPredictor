@@ -13,14 +13,15 @@ model_set = {'efficientnet_b2', 'shufflenet', 'regnet_x_32gf', 'efficientnet_b4'
 
 
 class ImageFeatureExtractor(nn.Module):
-    def __init__(self, model_name='resnet18', fine_tune=False, dtype=torch.double):
+    def __init__(self, model_name='resnet18', fine_tune=False, dtype=torch.double, device=torch.device('cpu')):
         super().__init__()
         self.dtype = dtype
+        self.device = device
         assert model_name in model_set, f'Model "{model_name}" is not a valid pre-trained model'
         pretrained_model = getattr(models, model_name)(pretrained=True)
-        self.model = nn.Sequential(*list(pretrained_model.children())[: -1])  # Chop off last classifier layer
+        self.model = nn.Sequential(*list(pretrained_model.children())[: -1]).to(device=self.device, dtype=self.dtype)  # Chop off last classifier layer
         self.model.eval()
-        self.output_shape = tuple(self.model(torch.randn((1, 3, 224, 224))).shape[1:])
+        self.output_shape = tuple(self.model(torch.randn((1, 3, 224, 224), device=self.device, dtype=self.dtype)).shape[1:])
         if fine_tune:
             self.model.train()
 
