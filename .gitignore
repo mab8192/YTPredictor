@@ -136,3 +136,4 @@ chromedriver.exe
 *.json
 *youtube_api/config.py
 dev.ipynb
+model_checkpoints

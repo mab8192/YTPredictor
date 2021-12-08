@@ -1,11 +1,16 @@
-from torch.utils.data import DataLoader
+import os
+import time
 import matplotlib.pyplot as plt
 import torch
-import time
+from torch import optim
+from torch.utils.data import DataLoader
+from dataset import ThumbnailDataset
+from model.predictor import ViewCountPredictor
+from model.yt_transformers import image_transforms
 
 
 class Trainer:
-    def __init__(self, model, train_data, val_data, optimizer, batch_size=32, epochs=10, scheduler=None, round_to=1):
+    def __init__(self, model, train_data, val_data, optimizer, batch_size=32, epochs=10, scheduler=None, round_to=5000, checkpoint_dir="./model_checkpoints"):
         self.train_data = train_data
         self.val_data = val_data
         self.batch_size = batch_size
@@ -17,6 +22,9 @@ class Trainer:
         self.val_history = []
         self.round_to = round_to
 
+        self.checkpoint_dir = checkpoint_dir
+        os.makedirs(checkpoint_dir, exist_ok=True)
+
     def validate(self):
         num_correct, num_samples = 0, 0
         with torch.no_grad():
@@ -26,10 +34,10 @@ class Trainer:
                 num_samples += scores.shape[0]
         return num_correct / num_samples
 
-    def train(self):
+    def train(self, save_every=1):
         # sample minibatch data
         self.model.train()
-        for i in range(self.epochs):
+        for i in range(1, self.epochs + 1):
             start_t = time.time()
             for j, data in enumerate(self.train_data):
                 images, captions, views = data
@@ -46,8 +54,14 @@ class Trainer:
                     print('(Iteration {} / {}) loss: {:.4f}'.format(j + 1, len(self.train_data), loss.item()))
             end_t = time.time()
             print('(Epoch {} / {}) loss: {:.4f} time per epoch: {:.1f}s'.format(i + 1, self.epochs, loss.item(), end_t-start_t))
-        if self.scheduler:
-            self.scheduler.step()
+
+            if i % save_every == 0:
+                torch.save(self.model.state_dict(), os.path.join(self.checkpoint_dir, f"model_{i}.pth"))
+            if self.scheduler:
+                self.scheduler.step()
+        self.plot_loss()
+        self.plot_validation()
+        return self.model
 
     def plot_loss(self):
         plt.plot(self.loss_history[5:])
@@ -64,6 +78,24 @@ class Trainer:
         plt.show()
 
 
+class Tester:
+    def __init__(self, model, test_data, round_to=1):
+        self.model = model
+        self.test_data = test_data
+        self.round_to = round_to
+
+    def test(self):
+        num_correct, num_samples = 0, 0
+        with torch.no_grad():
+            for im, cap, view in self.test_data:
+                scores = self.model.forward(im, cap)
+                num_correct += ((self.round_to * torch.round(scores / self.round_to)) == (
+                            self.round_to * torch.round(view.unsqueeze(1) / self.round_to))).sum()
+                num_samples += scores.shape[0]
+        print(f'Accuary: {num_correct / num_samples} ({num_correct} / {num_samples})')
+        return num_correct / num_samples
+
+
 def get_dataloader_splits(dataset, batch_size=16, train_percent=0.08, val_percent=0.02, test_percent=0.9):
     assert train_percent + val_percent + test_percent == 1.
     data_length = len(dataset)
@@ -73,24 +105,18 @@ def get_dataloader_splits(dataset, batch_size=16, train_percent=0.08, val_percen
     test, train, val = torch.utils.data.random_split(dataset, [test_size, train_size, val_size])
     train_data = DataLoader(train, batch_size=batch_size)
     val_data = DataLoader(val, batch_size=batch_size)
-    test_data = DataLoader(test, batch_size=batch_size)
+    test_data = DataLoader(test, batch_size=test_size)
     return test_data, train_data, val_data
 
 
 if __name__ == '__main__':
-    import pathlib
-    from YTPredictor.model.yt_transformers import image_transforms
-    from YTPredictor.model.predictor import ViewCountPredictor
-    from YTPredictor import ThumbnailDataset
-    from torch import optim
-    my_model = ViewCountPredictor(1000, 768)
-    data = ThumbnailDataset(root=str(pathlib.Path(__file__).parent.resolve()) + '/../youtube_api/',
-                            transforms=image_transforms['train'])
+    my_model = ViewCountPredictor()
+    data = ThumbnailDataset(root="./youtube_api/", transforms=image_transforms['train'])
     test_data, train_data, val_data = get_dataloader_splits(data, train_percent=0.2, val_percent=0.1, test_percent=0.7)
     learning_rate, lr_decay = 0.05, 1
     optimizer = optim.Adam(filter(lambda p: p.requires_grad, my_model.parameters()), learning_rate) # leave betas and eps by default
     lr_scheduler = optim.lr_scheduler.LambdaLR(optimizer, lambda epoch: lr_decay ** epoch)
     trainer = Trainer(model=my_model, train_data=train_data, val_data=val_data, optimizer=optimizer, scheduler=lr_scheduler, epochs=2)
-    trainer.train()
-    trainer.plot_loss()
-    trainer.plot_validation()
+    my_model = trainer.train()
+    tester = Tester(model=my_model, test_data=test_data)
+    tester.test()
