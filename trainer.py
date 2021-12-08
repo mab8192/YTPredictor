@@ -109,9 +109,15 @@ def get_dataloader_splits(dataset, batch_size=16, train_percent=0.08, val_percen
     return test_data, train_data, val_data
 
 
+def get_device():
+    device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+    print('using device:', device)
+    return device
+
+
 if __name__ == '__main__':
-    my_model = ViewCountPredictor()
-    data = ThumbnailDataset(root="./youtube_api/", transforms=image_transforms['train'])
+    my_model = ViewCountPredictor(device=get_device())
+    data = ThumbnailDataset(root="./", transforms=image_transforms['train'])
     test_data, train_data, val_data = get_dataloader_splits(data, train_percent=0.2, val_percent=0.1, test_percent=0.7)
     learning_rate, lr_decay = 0.05, 1
     optimizer = optim.Adam(filter(lambda p: p.requires_grad, my_model.parameters()), learning_rate) # leave betas and eps by default

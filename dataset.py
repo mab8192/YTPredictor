@@ -60,6 +60,6 @@ class ThumbnailDataset(torch.utils.data.Dataset):
 
 
 if __name__ == '__main__':
-    from YTPredictor.model.yt_transformers import image_transforms
+    from model.yt_transformers import image_transforms
     data = ThumbnailDataset(root=str(pathlib.Path(__file__).parent.resolve()) + '/youtube_api/',
                             transforms=image_transforms['train'])

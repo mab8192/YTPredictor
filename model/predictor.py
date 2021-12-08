@@ -3,8 +3,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from YTPredictor.model.image_fe import ImageFeatureExtractor
-from YTPredictor.model.title_fe import TitleFeatureExtractor
+from model.image_fe import ImageFeatureExtractor
+from model.title_fe import TitleFeatureExtractor
 
 
 class ViewCountPredictor(nn.Module):
