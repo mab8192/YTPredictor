@@ -5,7 +5,7 @@ import time
 
 
 class Trainer:
-    def __init__(self, model, train_data, val_data, optimizer, batch_size=32, epochs=10, scheduler=None, round_to=5000):
+    def __init__(self, model, train_data, val_data, optimizer, batch_size=32, epochs=10, scheduler=None, round_to=1):
         self.train_data = train_data
         self.val_data = val_data
         self.batch_size = batch_size
@@ -14,6 +14,7 @@ class Trainer:
         self.epochs = epochs
         self.scheduler = scheduler
         self.loss_history = []
+        self.val_history = []
         self.round_to = round_to
 
     def validate(self):
@@ -39,19 +40,27 @@ class Trainer:
                 self.optimizer.step()
                 if j % 5 == 0:
                     acc = self.validate()
-                    print('(Iteration {} / {}) loss: {:.4f}, val_acc: {:.6f}'.format(j, len(self.train_data), loss.item(), acc))
+                    self.val_history.append(acc)
+                    print('(Iteration {} / {}) loss: {:.4f}, val_acc: {:.6f}'.format(j + 1, len(self.train_data), loss.item(), acc))
                 else:
-                    print('(Iteration {} / {}) loss: {:.4f}'.format(j, len(self.train_data), loss.item()))
+                    print('(Iteration {} / {}) loss: {:.4f}'.format(j + 1, len(self.train_data), loss.item()))
             end_t = time.time()
-            print('(Epoch {} / {}) loss: {:.4f} time per epoch: {:.1f}s'.format(i, self.epochs, loss.item(), end_t-start_t))
+            print('(Epoch {} / {}) loss: {:.4f} time per epoch: {:.1f}s'.format(i + 1, self.epochs, loss.item(), end_t-start_t))
         if self.scheduler:
             self.scheduler.step()
 
     def plot_loss(self):
-        plt.plot(self.loss_history)
+        plt.plot(self.loss_history[5:])
         plt.xlabel('Iteration')
         plt.ylabel('Loss')
         plt.title('Training loss history')
+        plt.show()
+
+    def plot_validation(self):
+        plt.plot(self.val_history)
+        plt.xlabel('Iteration (*5)')
+        plt.ylabel('Accuracy')
+        plt.title('Validation Set Accuracy')
         plt.show()
 
 
@@ -77,10 +86,11 @@ if __name__ == '__main__':
     my_model = ViewCountPredictor(1000, 768)
     data = ThumbnailDataset(root=str(pathlib.Path(__file__).parent.resolve()) + '/../youtube_api/',
                             transforms=image_transforms['train'])
-    test_data, train_data, val_data = get_dataloader_splits(data)
-    learning_rate, lr_decay = 0.1, 1
+    test_data, train_data, val_data = get_dataloader_splits(data, train_percent=0.2, val_percent=0.1, test_percent=0.7)
+    learning_rate, lr_decay = 0.05, 1
     optimizer = optim.Adam(filter(lambda p: p.requires_grad, my_model.parameters()), learning_rate) # leave betas and eps by default
     lr_scheduler = optim.lr_scheduler.LambdaLR(optimizer, lambda epoch: lr_decay ** epoch)
     trainer = Trainer(model=my_model, train_data=train_data, val_data=val_data, optimizer=optimizer, scheduler=lr_scheduler, epochs=2)
     trainer.train()
     trainer.plot_loss()
+    trainer.plot_validation()

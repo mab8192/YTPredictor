@@ -19,9 +19,10 @@ class ViewCountPredictor(nn.Module):
 
         # Starting with a single linear layer to check that everything works
         self.regression_model = nn.Sequential(
-            nn.Linear(np.prod(self.image_fe.output_shape) + np.prod(self.title_fe.output_shape), 1, dtype=self.dtype),
-            # nn.Linear(np.prod(self.image_fe.output_shape) + np.prod(self.title_fe.output_shape), 256, dtype=self.dtype),
-            # nn.Linear(256, 1, dtype=self.dtype)
+            # nn.Linear(np.prod(self.image_fe.output_shape) + np.prod(self.title_fe.output_shape), 1, dtype=self.dtype),
+            nn.Linear(np.prod(self.image_fe.output_shape) + np.prod(self.title_fe.output_shape), 256, dtype=self.dtype),
+            nn.ReLU(),
+            nn.Linear(256, 1, dtype=self.dtype)
         )
 
     def forward(self, image, title):
