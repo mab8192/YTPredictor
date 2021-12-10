@@ -21,8 +21,8 @@ class ThumbnailDataset(torch.utils.data.Dataset):
 
         self.root = root
         self.transforms = transforms
-        self.imgs = list(sorted(os.listdir(os.path.join(root, "thumbnails"))))
-        self.video_data = json.load(open(os.path.join(root, "data.json")))
+        self.imgs = list(sorted(os.listdir(os.path.join(root, "thumbnailsFiltered"))))
+        self.video_data = json.load(open(os.path.join(root, "datafiltered.json")))
         self.clean_data()
 
     def __getitem__(self, idx):
@@ -33,7 +33,26 @@ class ThumbnailDataset(torch.utils.data.Dataset):
         img = Image.open(img_path).convert("RGB")
         img = self.transforms(img)
 
-        return img, (data['title'] if data['title'] else data['description']), float(data.get('viewCount', 0.))
+        return img, (data['title'] if data['title'] else data['description']), int(data.get('subscriberCount', 0)), self.get_views_as_box(float(data.get('viewCount', 0.)))
+
+    def get_views_as_box(self, views):
+        """ 
+        Places the viewcounts into boxes of certain value ranges.
+        """
+        boxed = torch.zeros(6, dtype=float)
+        if views < 1000:
+            boxed[0] = 1
+        elif views < 10000:
+            boxed[1] = 1
+        elif views < 100000:
+            boxed[2] = 1
+        elif views < 500000:
+            boxed[3] = 1
+        elif views < 1000000:
+            boxed[4] = 1
+        else:
+            boxed[5] = 1
+        return boxed
 
     def __len__(self):
         return len(self.imgs)

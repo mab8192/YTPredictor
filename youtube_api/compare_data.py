@@ -12,7 +12,7 @@ if (data is not None):
             if (f is None):
                 print("image not found for associated data. KEY: " + key + " image: " + key + ".jpg")
                 exit()
-    datafiltered = {x: y for x, y in data.items() if 'title' in y and 'viewCount' in y and y['title'].isascii()}
+    datafiltered = {x: y for x, y in data.items() if 'title' in y and 'viewCount' in y and 'subscriberCount' in y and y['subscriberCount'] != "-1" and y['title'].isascii()}
     with open('datafiltered.json', 'w') as f:
         json.dump(datafiltered, f)
     for key in datafiltered:

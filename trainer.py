@@ -13,7 +13,7 @@ from model.yt_transformers import image_transforms
 
 
 class Trainer:
-    def __init__(self, model, train_data, val_data, optimizer, batch_size=32, epochs=10, scheduler=None, round_to=5000, checkpoint_dir="./model_checkpoints"):
+    def __init__(self, model, train_data, val_data, optimizer, batch_size=50, epochs=10, scheduler=None, round_to=5000, checkpoint_dir="./model_checkpoints"):
         self.train_data = train_data
         self.val_data = val_data
         self.batch_size = batch_size
@@ -30,9 +30,10 @@ class Trainer:
     def validate(self):
         num_correct, num_samples = 0, 0
         with torch.no_grad():
-            for im, cap, view in self.val_data:
-                scores = self.model.forward(im, cap)
-                num_correct += ((self.round_to * torch.round(scores / self.round_to)) == (self.round_to * torch.round(view.unsqueeze(1) / self.round_to))).sum()
+            for im, cap, subs, view in self.val_data:
+                scores = self.model.forward(im, cap, subs)
+                print(scores.argmax(dim=1), view.argmax(dim=1))
+                num_correct += (scores.argmax(dim=1) == view.argmax(dim=1)).sum()
                 num_samples += scores.shape[0]
         return num_correct / num_samples
 
@@ -42,8 +43,8 @@ class Trainer:
         for i in range(1, self.epochs + 1):
             start_t = time.time()
             for j, data in enumerate(self.train_data):
-                images, captions, views = data
-                loss = self.model.loss(images, captions, views)
+                images, captions, subs, views = data
+                loss = self.model.loss(images, captions, subs, views)
                 self.optimizer.zero_grad()
                 loss.backward()
                 self.loss_history.append(loss.item())
@@ -70,7 +71,7 @@ class Trainer:
         plt.show()
 
 
-def get_dataloader_splits(dataset, batch_size=16, train_percent=0.08, val_percent=0.02, test_percent=0.9):
+def get_dataloader_splits(dataset, batch_size=50, train_percent=0.25, val_percent=0.25, test_percent=0.5):
     assert train_percent + val_percent + test_percent == 1.
     data_length = len(dataset)
     val_size = int(data_length * val_percent)
@@ -86,12 +87,12 @@ def get_dataloader_splits(dataset, batch_size=16, train_percent=0.08, val_percen
 if __name__ == '__main__':
 
     my_model = ViewCountPredictor()
-    data = ThumbnailDataset(root="./data",
+    data = ThumbnailDataset(root="./youtube_api",
                             transforms=image_transforms['train'])
     test_data, train_data, val_data = get_dataloader_splits(data)
-    learning_rate, lr_decay = 0.1, 1
+    learning_rate, lr_decay = 1e-2, 0.99
     optimizer = optim.Adam(filter(lambda p: p.requires_grad, my_model.parameters()), learning_rate) # leave betas and eps by default
     lr_scheduler = optim.lr_scheduler.LambdaLR(optimizer, lambda epoch: lr_decay ** epoch)
-    trainer = Trainer(model=my_model, train_data=train_data, val_data=val_data, optimizer=optimizer, scheduler=lr_scheduler, epochs=2)
+    trainer = Trainer(model=my_model, train_data=train_data, val_data=val_data, optimizer=optimizer, scheduler=lr_scheduler, epochs=100)
     trainer.train()
     trainer.plot_loss()

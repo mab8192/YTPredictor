@@ -20,22 +20,25 @@ class ViewCountPredictor(nn.Module):
 
         # Starting with a single linear layer to check that everything works
         self.regression_model = nn.Sequential(
-            nn.Linear(np.prod(self.image_fe.output_shape) + np.prod(self.title_fe.output_shape), 1, dtype=self.dtype),
-            # nn.Linear(np.prod(self.image_fe.output_shape) + np.prod(self.title_fe.output_shape), 256, dtype=self.dtype),
-            # nn.Linear(256, 1, dtype=self.dtype)
+            nn.Linear(np.prod(self.image_fe.output_shape) + np.prod(self.title_fe.output_shape) + 1, 1024, dtype=self.dtype),
+            #nn.ReLU(),
+            nn.Linear(1024, 256, dtype=self.dtype),
+            #nn.ReLU(),
+            nn.Linear(256, 6, dtype=self.dtype)
         )
 
-    def forward(self, image, title):
+    def forward(self, image, title, subs):
         img_feats = self.image_fe(image)
         title_feats = self.title_fe(title)
         img_feats = self.flatten(img_feats)
         title_feats = self.flatten(title_feats)
-        feat = torch.cat((img_feats, title_feats), dim=1)
+        subs = subs.reshape(-1, 1)
+        feat = torch.cat((img_feats, title_feats, subs), dim=1)
         return self.regression_model(feat)
-
-    def loss(self, image, title, views):
-        feat = self.forward(image, title)
-        return F.mse_loss(feat, views.unsqueeze(1))
+    
+    def loss(self, image, title, subs, views):
+        feat = self.forward(image, title, subs)
+        return F.l1_loss(feat, views)
 
 
 if __name__ == '__main__':

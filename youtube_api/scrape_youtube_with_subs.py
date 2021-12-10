@@ -3,13 +3,12 @@ from datetime import timedelta as td
 from datetime import datetime as dt
 import requests
 import random
-from config import AUTH_KEY
 import time
 import json
 
 
 # service instance is a helpful client wrapper of requests specifically built for YouTubes RESTful API v3 endpoints
-service = build('youtube', 'v3', developerKey=AUTH_KEY)
+service = build('youtube', 'v3', developerKey='AIzaSyAWfn0yU9FzpKdZlv-xea0eqfyLTDmw5NA')
 THUMBNAIL_SIZE = 'default'  # possible options are 'default' for 120x90, 'medium' for 320x180, 'high' for 480x360
 
 
@@ -81,7 +80,7 @@ def collect_data(search_results, statistics, channel_info):
     for item in data:
         for result in channel_info['items']:
             if data[item]['channelId'] == result['id']:
-                data[item]['subscriberCount'] = result['statistics']['subscriberCount']
+                data[item]['subscriberCount'] = result['statistics']['subscriberCount'] if 'subscriberCount' in result['statistics'] else '-1'
                 #if item['channelId'] == result['id']:
                 #item['channelStats'] = result
     return data
