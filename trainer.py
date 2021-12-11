@@ -25,6 +25,8 @@ class Trainer:
         self.acc_history = []
         self.val_acc_history = []
         self.round_to = round_to
+        self.val_actual_hist = []
+        self.train_actual_hist = []
 
         self.checkpoint_dir = checkpoint_dir
         os.makedirs(checkpoint_dir, exist_ok=True)
@@ -39,6 +41,9 @@ class Trainer:
                 num_samples += view.shape[0]
             print(torch.round(torch.log10(scores)).reshape(-1), torch.round(torch.log10(view)))
             self.val_acc_history.append(num_correct/num_samples)
+            differences = (scores - view)
+            for diff in differences:
+                self.val_actual_hist.append(diff)
         return num_correct / num_samples
     
     def test(self):
@@ -69,6 +74,9 @@ class Trainer:
                     acc = self.validate()
                     num_correct = (torch.round(torch.log10(scores)).reshape(-1) == torch.round(torch.log10(views))).sum()
                     num_samples = views.shape[0]
+                    differences = (scores - views)
+                    for diff in differences:
+                        self.train_actual_hist.append(diff)
                     self.acc_history.append(num_correct/num_samples)
                     print('(Iteration {} / {}) loss: {:.4f}, val_acc: {:.6f}, train_acc: {:.6f}'.format(j, len(self.train_data), loss.item(), acc, num_correct/num_samples))
                 else:
@@ -99,6 +107,17 @@ class Trainer:
         plt.ylabel('Validation accuracy')
         plt.title('Validation accuracy history')
         plt.show()
+        plt.hist(self.val_actual_hist)
+        plt.xlabel('Occurances')
+        plt.ylabel('Difference')
+        plt.title('Validation accuracy history')
+        plt.show()
+        plt.hist(self.train_actual_hist)
+        plt.xlabel('Occurances')
+        plt.ylabel('Difference')
+        plt.title('train accuracy history')
+        plt.show()
+
 
 
 def get_dataloader_splits(dataset, batch_size=16, train_percent=0.25, val_percent=0.25, test_percent=0.5):
@@ -120,7 +139,7 @@ if __name__ == '__main__':
     data = ThumbnailDataset(root="./youtube_api",
                             transforms=image_transforms['train'])
     test_data, train_data, val_data = get_dataloader_splits(data)
-    learning_rate, lr_decay = 5e-4, .995
+    learning_rate, lr_decay = 5e-4, .9
     optimizer = optim.Adam(filter(lambda p: p.requires_grad, my_model.parameters()), learning_rate) # leave betas and eps by default
     lr_scheduler = optim.lr_scheduler.LambdaLR(optimizer, lambda epoch: lr_decay ** epoch)
     trainer = Trainer(model=my_model, train_data=train_data, val_data=val_data, optimizer=optimizer, scheduler=lr_scheduler, epochs=5)
