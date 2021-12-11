@@ -22,6 +22,8 @@ class Trainer:
         self.epochs = epochs
         self.scheduler = scheduler
         self.loss_history = []
+        self.acc_history = []
+        self.val_acc_history = []
         self.round_to = round_to
 
         self.checkpoint_dir = checkpoint_dir
@@ -30,28 +32,45 @@ class Trainer:
     def validate(self):
         num_correct, num_samples = 0, 0
         with torch.no_grad():
+            scores, view = None, None
             for im, cap, subs, view in self.val_data:
                 scores = self.model.forward(im, cap, subs)
-                print(scores.argmax(dim=1), view.argmax(dim=1))
-                num_correct += (scores.argmax(dim=1) == view.argmax(dim=1)).sum()
-                num_samples += scores.shape[0]
+                num_correct += (torch.round(torch.log10(scores)).reshape(-1) == torch.round(torch.log10(view))).sum()
+                num_samples += view.shape[0]
+            print(torch.round(torch.log10(scores)).reshape(-1), torch.round(torch.log10(view)))
+            self.val_acc_history.append(num_correct/num_samples)
+        return num_correct / num_samples
+    
+    def test(self):
+        num_correct, num_samples = 0, 0
+        with torch.no_grad():
+            scores, view = None, None
+            for im, cap, subs, view in self.test_data:
+                scores = self.model.forward(im, cap, subs)
+                num_correct += (torch.round(torch.log10(scores)).reshape(-1) == torch.round(torch.log10(view))).sum()
+                num_samples += view.shape[0]
+            print(torch.round(torch.log10(scores)).reshape(-1), torch.round(torch.log10(view)))
         return num_correct / num_samples
 
     def train(self, save_every = 1):
         # sample minibatch data
         self.model.train()
+        
         for i in range(1, self.epochs + 1):
             start_t = time.time()
             for j, data in enumerate(self.train_data):
                 images, captions, subs, views = data
-                loss = self.model.loss(images, captions, subs, views)
+                loss, scores = self.model.loss(images, captions, subs, views)
                 self.optimizer.zero_grad()
                 loss.backward()
                 self.loss_history.append(loss.item())
                 self.optimizer.step()
                 if j % 5 == 0:
                     acc = self.validate()
-                    print('(Iteration {} / {}) loss: {:.4f}, val_acc: {:.6f}'.format(j, len(self.train_data), loss.item(), acc))
+                    num_correct = (torch.round(torch.log10(scores)).reshape(-1) == torch.round(torch.log10(views))).sum()
+                    num_samples = views.shape[0]
+                    self.acc_history.append(num_correct/num_samples)
+                    print('(Iteration {} / {}) loss: {:.4f}, val_acc: {:.6f}, train_acc: {:.6f}'.format(j, len(self.train_data), loss.item(), acc, num_correct/num_samples))
                 else:
                     print('(Iteration {} / {}) loss: {:.4f}'.format(j, len(self.train_data), loss.item()))
             end_t = time.time()
@@ -59,7 +78,7 @@ class Trainer:
 
             if i % save_every == 0:
                 torch.save(self.model.state_dict(), os.path.join(self.checkpoint_dir, f"model_{i}.pth"))
-
+                
         if self.scheduler:
             self.scheduler.step()
 
@@ -69,9 +88,20 @@ class Trainer:
         plt.ylabel('Loss')
         plt.title('Training loss history')
         plt.show()
+    def plot_accuracy(self):
+        plt.plot(self.acc_history)
+        plt.xlabel('Iteration')
+        plt.ylabel('Training accuracy')
+        plt.title('Training accuracy history')
+        plt.show()
+        plt.plot(self.val_acc_history)
+        plt.xlabel('Iteration')
+        plt.ylabel('Validation accuracy')
+        plt.title('Validation accuracy history')
+        plt.show()
 
 
-def get_dataloader_splits(dataset, batch_size=50, train_percent=0.25, val_percent=0.25, test_percent=0.5):
+def get_dataloader_splits(dataset, batch_size=16, train_percent=0.25, val_percent=0.25, test_percent=0.5):
     assert train_percent + val_percent + test_percent == 1.
     data_length = len(dataset)
     val_size = int(data_length * val_percent)
@@ -90,9 +120,11 @@ if __name__ == '__main__':
     data = ThumbnailDataset(root="./youtube_api",
                             transforms=image_transforms['train'])
     test_data, train_data, val_data = get_dataloader_splits(data)
-    learning_rate, lr_decay = 1e-2, 0.99
+    learning_rate, lr_decay = 5e-4, .995
     optimizer = optim.Adam(filter(lambda p: p.requires_grad, my_model.parameters()), learning_rate) # leave betas and eps by default
     lr_scheduler = optim.lr_scheduler.LambdaLR(optimizer, lambda epoch: lr_decay ** epoch)
-    trainer = Trainer(model=my_model, train_data=train_data, val_data=val_data, optimizer=optimizer, scheduler=lr_scheduler, epochs=100)
+    trainer = Trainer(model=my_model, train_data=train_data, val_data=val_data, optimizer=optimizer, scheduler=lr_scheduler, epochs=5)
     trainer.train()
     trainer.plot_loss()
+    trainer.plot_accuracy()
+    print(trainer.test())

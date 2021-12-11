@@ -1,0 +1,1910 @@
+tensor([4, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([3, 0, 3, 5, 2, 3, 3, 3, 2, 4, 1, 4, 3, 3, 2, 1, 3, 2, 2, 2, 3, 3, 2, 3,
+        3, 3, 2, 5, 3, 2, 1, 2, 5, 2, 2, 2, 0, 2, 2, 2, 3, 3, 2, 3, 2, 2, 2, 2,
+        2, 2])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]) tensor([2, 2, 2, 2, 3, 2, 3, 0, 1, 3, 2])
+(Iteration 5 / 9) loss: 384981.1849, val_acc: 0.060827
+(Iteration 6 / 9) loss: 171168.4002
+(Iteration 7 / 9) loss: 290771.7673
+(Iteration 8 / 9) loss: 281192.3114
+(Epoch 1 / 100) loss: 281192.3114 time per epoch: 169.6s
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([3, 2, 4, 3, 2, 2, 2, 3, 2, 2, 2, 5, 3, 2, 3, 2, 2, 3, 2, 4, 5, 0, 2, 0,
+        2, 2, 2, 2, 3, 2, 2, 0, 0, 3, 3, 2, 3, 2, 3, 5, 2, 3, 2, 2, 1, 3, 2, 3,
+        3, 3])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([2, 5, 3, 2, 3, 2, 2, 3, 3, 2, 1, 2, 2, 3, 3, 3, 4, 5, 2, 3, 2, 2, 5, 3,
+        2, 3, 5, 2, 3, 2, 0, 2, 2, 2, 2, 3, 0, 2, 3, 3, 2, 5, 2, 1, 5, 3, 2, 3,
+        0, 3])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([2, 2, 2, 2, 2, 2, 3, 3, 4, 3, 3, 2, 2, 5, 2, 2, 2, 3, 2, 3, 2, 1, 2, 3,
+        5, 2, 2, 2, 2, 3, 1, 3, 3, 3, 2, 3, 3, 2, 2, 3, 4, 4, 2, 4, 2, 3, 5, 5,
+        2, 2])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([1, 2, 2, 3, 3, 1, 3, 2, 1, 4, 0, 3, 2, 2, 2, 3, 3, 1, 3, 0, 3, 3, 5, 3,
+        2, 2, 2, 1, 3, 2, 4, 2, 2, 2, 1, 3, 4, 4, 2, 4, 5, 2, 3, 3, 4, 2, 3, 1,
+        5, 2])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([2, 3, 4, 3, 3, 3, 2, 2, 2, 0, 3, 3, 3, 2, 4, 4, 2, 2, 3, 2, 3, 3, 1, 3,
+        3, 4, 3, 3, 3, 3, 4, 1, 2, 3, 5, 2, 5, 5, 5, 2, 2, 2, 2, 3, 2, 3, 4, 2,
+        1, 2])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([2, 2, 2, 1, 4, 1, 2, 2, 2, 2, 3, 3, 2, 2, 3, 4, 2, 4, 3, 3, 3, 2, 2, 2,
+        2, 2, 2, 3, 3, 0, 2, 2, 3, 3, 3, 2, 2, 2, 2, 2, 2, 5, 2, 2, 3, 2, 2, 5,
+        2, 3])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([3, 3, 5, 2, 3, 3, 3, 2, 0, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 5, 3, 3, 2, 2,
+        0, 5, 5, 2, 3, 4, 2, 2, 5, 3, 2, 1, 3, 2, 2, 2, 3, 2, 2, 0, 3, 1, 2, 1,
+        2, 2])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([3, 0, 3, 5, 2, 3, 3, 3, 2, 4, 1, 4, 3, 3, 2, 1, 3, 2, 2, 2, 3, 3, 2, 3,
+        3, 3, 2, 5, 3, 2, 1, 2, 5, 2, 2, 2, 0, 2, 2, 2, 3, 3, 2, 3, 2, 2, 2, 2,
+        2, 2])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]) tensor([2, 2, 2, 2, 3, 2, 3, 0, 1, 3, 2])
+(Iteration 0 / 9) loss: 71293.7866, val_acc: 0.060827
+(Iteration 1 / 9) loss: 200693.8117
+(Iteration 2 / 9) loss: 559446.5307
+(Iteration 3 / 9) loss: 653086.9687
+(Iteration 4 / 9) loss: 252101.4099
+tensor([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1,
+        2, 2, 2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2]) tensor([3, 2, 4, 3, 2, 2, 2, 3, 2, 2, 2, 5, 3, 2, 3, 2, 2, 3, 2, 4, 5, 0, 2, 0,
+        2, 2, 2, 2, 3, 2, 2, 0, 0, 3, 3, 2, 3, 2, 3, 5, 2, 3, 2, 2, 1, 3, 2, 3,
+        3, 3])
+tensor([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        1, 2]) tensor([2, 5, 3, 2, 3, 2, 2, 3, 3, 2, 1, 2, 2, 3, 3, 3, 4, 5, 2, 3, 2, 2, 5, 3,
+        2, 3, 5, 2, 3, 2, 0, 2, 2, 2, 2, 3, 0, 2, 3, 3, 2, 5, 2, 1, 5, 3, 2, 3,
+        0, 3])
+tensor([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2,
+        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2]) tensor([2, 2, 2, 2, 2, 2, 3, 3, 4, 3, 3, 2, 2, 5, 2, 2, 2, 3, 2, 3, 2, 1, 2, 3,
+        5, 2, 2, 2, 2, 3, 1, 3, 3, 3, 2, 3, 3, 2, 2, 3, 4, 4, 2, 4, 2, 3, 5, 5,
+        2, 2])
+tensor([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2,
+        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2]) tensor([1, 2, 2, 3, 3, 1, 3, 2, 1, 4, 0, 3, 2, 2, 2, 3, 3, 1, 3, 0, 3, 3, 5, 3,
+        2, 2, 2, 1, 3, 2, 4, 2, 2, 2, 1, 3, 4, 4, 2, 4, 5, 2, 3, 3, 4, 2, 3, 1,
+        5, 2])
+tensor([2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2]) tensor([2, 3, 4, 3, 3, 3, 2, 2, 2, 0, 3, 3, 3, 2, 4, 4, 2, 2, 3, 2, 3, 3, 1, 3,
+        3, 4, 3, 3, 3, 3, 4, 1, 2, 3, 5, 2, 5, 5, 5, 2, 2, 2, 2, 3, 2, 3, 4, 2,
+        1, 2])
+tensor([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2, 2, 2, 2, 4, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2]) tensor([2, 2, 2, 1, 4, 1, 2, 2, 2, 2, 3, 3, 2, 2, 3, 4, 2, 4, 3, 3, 3, 2, 2, 2,
+        2, 2, 2, 3, 3, 0, 2, 2, 3, 3, 3, 2, 2, 2, 2, 2, 2, 5, 2, 2, 3, 2, 2, 5,
+        2, 3])
+tensor([2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2,
+        2, 2]) tensor([3, 3, 5, 2, 3, 3, 3, 2, 0, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 5, 3, 3, 2, 2,
+        0, 5, 5, 2, 3, 4, 2, 2, 5, 3, 2, 1, 3, 2, 2, 2, 3, 2, 2, 0, 3, 1, 2, 1,
+        2, 2])
+tensor([2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2]) tensor([3, 0, 3, 5, 2, 3, 3, 3, 2, 4, 1, 4, 3, 3, 2, 1, 3, 2, 2, 2, 3, 3, 2, 3,
+        3, 3, 2, 5, 3, 2, 1, 2, 5, 2, 2, 2, 0, 2, 2, 2, 3, 3, 2, 3, 2, 2, 2, 2,
+        2, 2])
+tensor([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]) tensor([2, 2, 2, 2, 3, 2, 3, 0, 1, 3, 2])
+(Iteration 5 / 9) loss: 202925.3618, val_acc: 0.450122
+(Iteration 6 / 9) loss: 121221.6062
+(Iteration 7 / 9) loss: 317505.4032
+(Iteration 8 / 9) loss: 190109.4433
+(Epoch 2 / 100) loss: 190109.4433 time per epoch: 170.1s
+tensor([3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1, 3, 3, 3, 3, 3, 3, 3, 1, 3, 0,
+        3, 3, 3, 3, 3, 3, 3, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+        3, 3]) tensor([3, 2, 4, 3, 2, 2, 2, 3, 2, 2, 2, 5, 3, 2, 3, 2, 2, 3, 2, 4, 5, 0, 2, 0,
+        2, 2, 2, 2, 3, 2, 2, 0, 0, 3, 3, 2, 3, 2, 3, 5, 2, 3, 2, 2, 1, 3, 2, 3,
+        3, 3])
+tensor([3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+        3, 3, 3, 3, 3, 3, 1, 3, 3, 3, 3, 3, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+        1, 3]) tensor([2, 5, 3, 2, 3, 2, 2, 3, 3, 2, 1, 2, 2, 3, 3, 3, 4, 5, 2, 3, 2, 2, 5, 3,
+        2, 3, 5, 2, 3, 2, 0, 2, 2, 2, 2, 3, 0, 2, 3, 3, 2, 5, 2, 1, 5, 3, 2, 3,
+        0, 3])
+tensor([3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1, 3, 3,
+        3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+        3, 3]) tensor([2, 2, 2, 2, 2, 2, 3, 3, 4, 3, 3, 2, 2, 5, 2, 2, 2, 3, 2, 3, 2, 1, 2, 3,
+        5, 2, 2, 2, 2, 3, 1, 3, 3, 3, 2, 3, 3, 2, 2, 3, 4, 4, 2, 4, 2, 3, 5, 5,
+        2, 2])
+tensor([3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1, 3, 3, 3, 3, 3, 3, 3, 3, 1, 3, 3, 3, 3,
+        3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+        3, 3]) tensor([1, 2, 2, 3, 3, 1, 3, 2, 1, 4, 0, 3, 2, 2, 2, 3, 3, 1, 3, 0, 3, 3, 5, 3,
+        2, 2, 2, 1, 3, 2, 4, 2, 2, 2, 1, 3, 4, 4, 2, 4, 5, 2, 3, 3, 4, 2, 3, 1,
+        5, 2])
+tensor([3, 3, 3, 3, 3, 3, 3, 3, 3, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+        3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+        3, 3]) tensor([2, 3, 4, 3, 3, 3, 2, 2, 2, 0, 3, 3, 3, 2, 4, 4, 2, 2, 3, 2, 3, 3, 1, 3,
+        3, 4, 3, 3, 3, 3, 4, 1, 2, 3, 5, 2, 5, 5, 5, 2, 2, 2, 2, 3, 2, 3, 4, 2,
+        1, 2])
+tensor([3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+        3, 3, 3, 3, 3, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+        3, 3]) tensor([2, 2, 2, 1, 4, 1, 2, 2, 2, 2, 3, 3, 2, 2, 3, 4, 2, 4, 3, 3, 3, 2, 2, 2,
+        2, 2, 2, 3, 3, 0, 2, 2, 3, 3, 3, 2, 2, 2, 2, 2, 2, 5, 2, 2, 3, 2, 2, 5,
+        2, 3])
+tensor([3, 3, 3, 3, 3, 3, 3, 3, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+        1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1, 3, 3, 3, 3,
+        3, 3]) tensor([3, 3, 5, 2, 3, 3, 3, 2, 0, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 5, 3, 3, 2, 2,
+        0, 5, 5, 2, 3, 4, 2, 2, 5, 3, 2, 1, 3, 2, 2, 2, 3, 2, 2, 0, 3, 1, 2, 1,
+        2, 2])
+tensor([3, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+        3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+        0, 3]) tensor([3, 0, 3, 5, 2, 3, 3, 3, 2, 4, 1, 4, 3, 3, 2, 1, 3, 2, 2, 2, 3, 3, 2, 3,
+        3, 3, 2, 5, 3, 2, 1, 2, 5, 2, 2, 2, 0, 2, 2, 2, 3, 3, 2, 3, 2, 2, 2, 2,
+        2, 2])
+tensor([3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]) tensor([2, 2, 2, 2, 3, 2, 3, 0, 1, 3, 2])
+(Iteration 0 / 9) loss: 93529.9246, val_acc: 0.321168
+(Iteration 1 / 9) loss: 67571.0486
+(Iteration 2 / 9) loss: 189689.6347
+(Iteration 3 / 9) loss: 103572.2801
+(Iteration 4 / 9) loss: 132373.8595
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([3, 2, 4, 3, 2, 2, 2, 3, 2, 2, 2, 5, 3, 2, 3, 2, 2, 3, 2, 4, 5, 0, 2, 0,
+        2, 2, 2, 2, 3, 2, 2, 0, 0, 3, 3, 2, 3, 2, 3, 5, 2, 3, 2, 2, 1, 3, 2, 3,
+        3, 3])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([2, 5, 3, 2, 3, 2, 2, 3, 3, 2, 1, 2, 2, 3, 3, 3, 4, 5, 2, 3, 2, 2, 5, 3,
+        2, 3, 5, 2, 3, 2, 0, 2, 2, 2, 2, 3, 0, 2, 3, 3, 2, 5, 2, 1, 5, 3, 2, 3,
+        0, 3])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([2, 2, 2, 2, 2, 2, 3, 3, 4, 3, 3, 2, 2, 5, 2, 2, 2, 3, 2, 3, 2, 1, 2, 3,
+        5, 2, 2, 2, 2, 3, 1, 3, 3, 3, 2, 3, 3, 2, 2, 3, 4, 4, 2, 4, 2, 3, 5, 5,
+        2, 2])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([1, 2, 2, 3, 3, 1, 3, 2, 1, 4, 0, 3, 2, 2, 2, 3, 3, 1, 3, 0, 3, 3, 5, 3,
+        2, 2, 2, 1, 3, 2, 4, 2, 2, 2, 1, 3, 4, 4, 2, 4, 5, 2, 3, 3, 4, 2, 3, 1,
+        5, 2])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([2, 3, 4, 3, 3, 3, 2, 2, 2, 0, 3, 3, 3, 2, 4, 4, 2, 2, 3, 2, 3, 3, 1, 3,
+        3, 4, 3, 3, 3, 3, 4, 1, 2, 3, 5, 2, 5, 5, 5, 2, 2, 2, 2, 3, 2, 3, 4, 2,
+        1, 2])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([2, 2, 2, 1, 4, 1, 2, 2, 2, 2, 3, 3, 2, 2, 3, 4, 2, 4, 3, 3, 3, 2, 2, 2,
+        2, 2, 2, 3, 3, 0, 2, 2, 3, 3, 3, 2, 2, 2, 2, 2, 2, 5, 2, 2, 3, 2, 2, 5,
+        2, 3])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([3, 3, 5, 2, 3, 3, 3, 2, 0, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 5, 3, 3, 2, 2,
+        0, 5, 5, 2, 3, 4, 2, 2, 5, 3, 2, 1, 3, 2, 2, 2, 3, 2, 2, 0, 3, 1, 2, 1,
+        2, 2])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([3, 0, 3, 5, 2, 3, 3, 3, 2, 4, 1, 4, 3, 3, 2, 1, 3, 2, 2, 2, 3, 3, 2, 3,
+        3, 3, 2, 5, 3, 2, 1, 2, 5, 2, 2, 2, 0, 2, 2, 2, 3, 3, 2, 3, 2, 2, 2, 2,
+        2, 2])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]) tensor([2, 2, 2, 2, 3, 2, 3, 0, 1, 3, 2])
+(Iteration 5 / 9) loss: 219715.9674, val_acc: 0.063260
+(Iteration 6 / 9) loss: 196322.5712
+(Iteration 7 / 9) loss: 259346.6275
+(Iteration 8 / 9) loss: 79819.8040
+(Epoch 3 / 100) loss: 79819.8040 time per epoch: 171.0s
+tensor([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2]) tensor([3, 2, 4, 3, 2, 2, 2, 3, 2, 2, 2, 5, 3, 2, 3, 2, 2, 3, 2, 4, 5, 0, 2, 0,
+        2, 2, 2, 2, 3, 2, 2, 0, 0, 3, 3, 2, 3, 2, 3, 5, 2, 3, 2, 2, 1, 3, 2, 3,
+        3, 3])
+tensor([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2]) tensor([2, 5, 3, 2, 3, 2, 2, 3, 3, 2, 1, 2, 2, 3, 3, 3, 4, 5, 2, 3, 2, 2, 5, 3,
+        2, 3, 5, 2, 3, 2, 0, 2, 2, 2, 2, 3, 0, 2, 3, 3, 2, 5, 2, 1, 5, 3, 2, 3,
+        0, 3])
+tensor([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2]) tensor([2, 2, 2, 2, 2, 2, 3, 3, 4, 3, 3, 2, 2, 5, 2, 2, 2, 3, 2, 3, 2, 1, 2, 3,
+        5, 2, 2, 2, 2, 3, 1, 3, 3, 3, 2, 3, 3, 2, 2, 3, 4, 4, 2, 4, 2, 3, 5, 5,
+        2, 2])
+tensor([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2]) tensor([1, 2, 2, 3, 3, 1, 3, 2, 1, 4, 0, 3, 2, 2, 2, 3, 3, 1, 3, 0, 3, 3, 5, 3,
+        2, 2, 2, 1, 3, 2, 4, 2, 2, 2, 1, 3, 4, 4, 2, 4, 5, 2, 3, 3, 4, 2, 3, 1,
+        5, 2])
+tensor([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2]) tensor([2, 3, 4, 3, 3, 3, 2, 2, 2, 0, 3, 3, 3, 2, 4, 4, 2, 2, 3, 2, 3, 3, 1, 3,
+        3, 4, 3, 3, 3, 3, 4, 1, 2, 3, 5, 2, 5, 5, 5, 2, 2, 2, 2, 3, 2, 3, 4, 2,
+        1, 2])
+tensor([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2]) tensor([2, 2, 2, 1, 4, 1, 2, 2, 2, 2, 3, 3, 2, 2, 3, 4, 2, 4, 3, 3, 3, 2, 2, 2,
+        2, 2, 2, 3, 3, 0, 2, 2, 3, 3, 3, 2, 2, 2, 2, 2, 2, 5, 2, 2, 3, 2, 2, 5,
+        2, 3])
+tensor([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2]) tensor([3, 3, 5, 2, 3, 3, 3, 2, 0, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 5, 3, 3, 2, 2,
+        0, 5, 5, 2, 3, 4, 2, 2, 5, 3, 2, 1, 3, 2, 2, 2, 3, 2, 2, 0, 3, 1, 2, 1,
+        2, 2])
+tensor([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+        2, 2]) tensor([3, 0, 3, 5, 2, 3, 3, 3, 2, 4, 1, 4, 3, 3, 2, 1, 3, 2, 2, 2, 3, 3, 2, 3,
+        3, 3, 2, 5, 3, 2, 1, 2, 5, 2, 2, 2, 0, 2, 2, 2, 3, 3, 2, 3, 2, 2, 2, 2,
+        2, 2])
+tensor([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]) tensor([2, 2, 2, 2, 3, 2, 3, 0, 1, 3, 2])
+(Iteration 0 / 9) loss: 89115.9722, val_acc: 0.457421
+(Iteration 1 / 9) loss: 68675.7750
+(Iteration 2 / 9) loss: 191375.7758
+(Iteration 3 / 9) loss: 65851.8912
+(Iteration 4 / 9) loss: 107252.7227
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([3, 2, 4, 3, 2, 2, 2, 3, 2, 2, 2, 5, 3, 2, 3, 2, 2, 3, 2, 4, 5, 0, 2, 0,
+        2, 2, 2, 2, 3, 2, 2, 0, 0, 3, 3, 2, 3, 2, 3, 5, 2, 3, 2, 2, 1, 3, 2, 3,
+        3, 3])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([2, 5, 3, 2, 3, 2, 2, 3, 3, 2, 1, 2, 2, 3, 3, 3, 4, 5, 2, 3, 2, 2, 5, 3,
+        2, 3, 5, 2, 3, 2, 0, 2, 2, 2, 2, 3, 0, 2, 3, 3, 2, 5, 2, 1, 5, 3, 2, 3,
+        0, 3])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([2, 2, 2, 2, 2, 2, 3, 3, 4, 3, 3, 2, 2, 5, 2, 2, 2, 3, 2, 3, 2, 1, 2, 3,
+        5, 2, 2, 2, 2, 3, 1, 3, 3, 3, 2, 3, 3, 2, 2, 3, 4, 4, 2, 4, 2, 3, 5, 5,
+        2, 2])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([1, 2, 2, 3, 3, 1, 3, 2, 1, 4, 0, 3, 2, 2, 2, 3, 3, 1, 3, 0, 3, 3, 5, 3,
+        2, 2, 2, 1, 3, 2, 4, 2, 2, 2, 1, 3, 4, 4, 2, 4, 5, 2, 3, 3, 4, 2, 3, 1,
+        5, 2])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([2, 3, 4, 3, 3, 3, 2, 2, 2, 0, 3, 3, 3, 2, 4, 4, 2, 2, 3, 2, 3, 3, 1, 3,
+        3, 4, 3, 3, 3, 3, 4, 1, 2, 3, 5, 2, 5, 5, 5, 2, 2, 2, 2, 3, 2, 3, 4, 2,
+        1, 2])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([2, 2, 2, 1, 4, 1, 2, 2, 2, 2, 3, 3, 2, 2, 3, 4, 2, 4, 3, 3, 3, 2, 2, 2,
+        2, 2, 2, 3, 3, 0, 2, 2, 3, 3, 3, 2, 2, 2, 2, 2, 2, 5, 2, 2, 3, 2, 2, 5,
+        2, 3])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([3, 3, 5, 2, 3, 3, 3, 2, 0, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 5, 3, 3, 2, 2,
+        0, 5, 5, 2, 3, 4, 2, 2, 5, 3, 2, 1, 3, 2, 2, 2, 3, 2, 2, 0, 3, 1, 2, 1,
+        2, 2])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+        4, 4]) tensor([3, 0, 3, 5, 2, 3, 3, 3, 2, 4, 1, 4, 3, 3, 2, 1, 3, 2, 2, 2, 3, 3, 2, 3,
+        3, 3, 2, 5, 3, 2, 1, 2, 5, 2, 2, 2, 0, 2, 2, 2, 3, 3, 2, 3, 2, 2, 2, 2,
+        2, 2])
+tensor([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]) tensor([2, 2, 2, 2, 3, 2, 3, 0, 1, 3, 2])
+(Iteration 5 / 9) loss: 183525.5699, val_acc: 0.063260
+(Iteration 6 / 9) loss: 121378.1205
+(Iteration 7 / 9) loss: 133891.9502
+(Iteration 8 / 9) loss: 141314.5535
+(Epoch 4 / 100) loss: 141314.5535 time per epoch: 176.1s
+tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0]) tensor([3, 2, 4, 3, 2, 2, 2, 3, 2, 2, 2, 5, 3, 2, 3, 2, 2, 3, 2, 4, 5, 0, 2, 0,
+        2, 2, 2, 2, 3, 2, 2, 0, 0, 3, 3, 2, 3, 2, 3, 5, 2, 3, 2, 2, 1, 3, 2, 3,
+        3, 3])
+tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0]) tensor([2, 5, 3, 2, 3, 2, 2, 3, 3, 2, 1, 2, 2, 3, 3, 3, 4, 5, 2, 3, 2, 2, 5, 3,
+        2, 3, 5, 2, 3, 2, 0, 2, 2, 2, 2, 3, 0, 2, 3, 3, 2, 5, 2, 1, 5, 3, 2, 3,
+        0, 3])
+tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0]) tensor([2, 2, 2, 2, 2, 2, 3, 3, 4, 3, 3, 2, 2, 5, 2, 2, 2, 3, 2, 3, 2, 1, 2, 3,
+        5, 2, 2, 2, 2, 3, 1, 3, 3, 3, 2, 3, 3, 2, 2, 3, 4, 4, 2, 4, 2, 3, 5, 5,
+        2, 2])
+Traceback (most recent call last):
+  File "f:\YTPredictor\trainer.py", line 97, in <module>
+    trainer.train()
+  File "f:\YTPredictor\trainer.py", line 53, in train
+    acc = self.validate()
+  File "f:\YTPredictor\trainer.py", line 34, in validate
+    scores = self.model.forward(im, cap, subs)
+  File "f:\YTPredictor\model\predictor.py", line 31, in forward
+    )
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "f:\YTPredictor\model\image_fe.py", line 28, in forward
+    return self.model(x).type(self.dtype)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\container.py", line 141, in forward
+    input = module(input)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\conv.py", line 446, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\conv.py", line 442, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+KeyboardInterrupt
+PS F:\YTPredictor> & C:/Users/noahd/AppData/Local/Microsoft/WindowsApps/python3.9.exe f:/YTPredictor/trainer.py
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.seq_relationship.weight', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.weight', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+(Iteration 0 / 83) loss: 387788.2955, val_acc: 0.077859
+(Iteration 1 / 83) loss: 248437.4067
+(Iteration 2 / 83) loss: 561951.2581
+(Iteration 3 / 83) loss: 624061.9437
+(Iteration 4 / 83) loss: 881866.8463
+(Iteration 5 / 83) loss: 493701.5349, val_acc: 0.077859
+(Iteration 6 / 83) loss: 715441.7052
+(Iteration 7 / 83) loss: 243987.6947
+(Iteration 8 / 83) loss: 807420.1267
+(Iteration 9 / 83) loss: 485231.0751
+(Iteration 10 / 83) loss: 1097350.4185, val_acc: 0.080292
+(Iteration 11 / 83) loss: 1361807.1205
+(Iteration 12 / 83) loss: 518536.2578
+(Iteration 13 / 83) loss: 2890875.8547
+(Iteration 14 / 83) loss: 204086.2331
+(Iteration 15 / 83) loss: 516278.7605, val_acc: 0.090024
+(Iteration 16 / 83) loss: 42301.3616
+(Iteration 17 / 83) loss: 632008.4718
+(Iteration 18 / 83) loss: 103843.8056
+(Iteration 19 / 83) loss: 86212.0670
+(Iteration 20 / 83) loss: 654339.3344, val_acc: 0.476886
+(Iteration 21 / 83) loss: 593075.7669
+(Iteration 22 / 83) loss: 138366.5568
+(Iteration 23 / 83) loss: 118107.4005
+(Iteration 24 / 83) loss: 54281.9574
+(Iteration 25 / 83) loss: 18434.1532, val_acc: 0.311436
+(Iteration 26 / 83) loss: 91463.5826
+(Iteration 27 / 83) loss: 44238.7229
+(Iteration 28 / 83) loss: 105163.5993
+(Iteration 29 / 83) loss: 36432.6292
+(Iteration 30 / 83) loss: 882771.2546, val_acc: 0.070560
+(Iteration 31 / 83) loss: 163148.9097
+(Iteration 32 / 83) loss: 13764.4117
+(Iteration 33 / 83) loss: 6704.6717
+(Iteration 34 / 83) loss: 32783.1941
+(Iteration 35 / 83) loss: 344564.6513, val_acc: 0.474453
+(Iteration 36 / 83) loss: 127307.6587
+(Iteration 37 / 83) loss: 116762.6619
+(Iteration 38 / 83) loss: 23145.9573
+(Iteration 39 / 83) loss: 79527.7273
+(Iteration 40 / 83) loss: 97804.0864, val_acc: 0.009732
+(Iteration 41 / 83) loss: 130051.1989
+(Iteration 42 / 83) loss: 90975.5512
+(Iteration 43 / 83) loss: 37498.5559
+(Iteration 44 / 83) loss: 15163.7249
+(Iteration 45 / 83) loss: 12039.4095, val_acc: 0.469586
+(Iteration 46 / 83) loss: 12749.0199
+(Iteration 47 / 83) loss: 49382.7792
+(Iteration 48 / 83) loss: 30859.7582
+(Iteration 49 / 83) loss: 39860.4988
+(Iteration 50 / 83) loss: 27918.8139, val_acc: 0.075426
+(Iteration 51 / 83) loss: 44298.9534
+(Iteration 52 / 83) loss: 126259.3639
+(Iteration 53 / 83) loss: 57232.0648
+(Iteration 54 / 83) loss: 238187.2819
+(Iteration 55 / 83) loss: 93379.2646, val_acc: 0.036496
+(Iteration 56 / 83) loss: 169321.4911
+(Iteration 57 / 83) loss: 95166.0073
+(Iteration 58 / 83) loss: 73934.8600
+(Iteration 59 / 83) loss: 69966.4619
+(Iteration 60 / 83) loss: 42479.7561, val_acc: 0.036496
+(Iteration 61 / 83) loss: 14567.1341
+(Iteration 62 / 83) loss: 34198.1368
+(Iteration 63 / 83) loss: 29380.9724
+(Iteration 64 / 83) loss: 33666.5176
+Traceback (most recent call last):
+  File "f:\YTPredictor\trainer.py", line 96, in <module>
+    trainer.train()
+  File "f:\YTPredictor\trainer.py", line 52, in train
+    acc = self.validate()
+  File "f:\YTPredictor\trainer.py", line 34, in validate
+    scores = self.model.forward(im, cap, subs)
+  File "f:\YTPredictor\model\predictor.py", line 31, in forward
+    title_feats = self.title_fe(title)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "f:\YTPredictor\model\title_fe.py", line 30, in forward
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\models\bert\modeling_bert.py", line 996, in forward   
+    encoder_outputs = self.encoder(
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\models\bert\modeling_bert.py", line 583, in forward   
+    layer_outputs = layer_module(
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\models\bert\modeling_bert.py", line 511, in forward   
+    layer_output = apply_chunking_to_forward(
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\modeling_utils.py", line 2360, in apply_chunking_to_forward
+    return forward_fn(*input_tensors)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\models\bert\modeling_bert.py", line 524, in feed_forward_chunk
+    layer_output = self.output(intermediate_output, attention_output)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\models\bert\modeling_bert.py", line 437, in forward   
+    hidden_states = self.dense(hidden_states)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\linear.py", line 103, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\functional.py", line 1848, in linear
+    return torch._C._nn.linear(input, weight, bias)
+KeyboardInterrupt
+PS F:\YTPredictor> & C:/Users/noahd/AppData/Local/Microsoft/WindowsApps/python3.9.exe f:/YTPredictor/trainer.py
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.dense.weight', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+(Iteration 0 / 83) loss: 153970.7735, val_acc: 0.311436
+(Iteration 1 / 83) loss: 488468.8132
+(Iteration 2 / 83) loss: 288979.1349
+(Iteration 3 / 83) loss: 450449.8797
+(Iteration 4 / 83) loss: 252084.7735
+(Iteration 5 / 83) loss: 384748.7834, val_acc: 0.311436
+(Iteration 6 / 83) loss: 38286.8977
+(Iteration 7 / 83) loss: 136246.0237
+(Iteration 8 / 83) loss: 45585.4917
+(Iteration 9 / 83) loss: 124779.1226
+(Iteration 10 / 83) loss: 633431.3632, val_acc: 0.043796
+(Iteration 11 / 83) loss: 87686.0668
+(Iteration 12 / 83) loss: 405282.1374
+(Iteration 13 / 83) loss: 90800.2786
+(Iteration 14 / 83) loss: 160406.1790
+Traceback (most recent call last):
+  File "f:\YTPredictor\trainer.py", line 96, in <module>
+    trainer.train()
+  File "f:\YTPredictor\trainer.py", line 52, in train
+    acc = self.validate()
+  File "f:\YTPredictor\trainer.py", line 34, in validate
+    scores = self.model.forward(im, cap, subs)
+  File "f:\YTPredictor\model\predictor.py", line 33, in forward
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "f:\YTPredictor\model\title_fe.py", line 30, in forward
+    return self.model.forward(**self.title_transform(list(input), padding=True))['pooler_output'].type(self.dtype)  # using last_hidden_state produces variable output sizes
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\models\bert\modeling_bert.py", line 996, in forward   
+    encoder_outputs = self.encoder(
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\models\bert\modeling_bert.py", line 583, in forward   
+    layer_outputs = layer_module(
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\models\bert\modeling_bert.py", line 511, in forward   
+    layer_output = apply_chunking_to_forward(
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\modeling_utils.py", line 2360, in apply_chunking_to_forward
+    return forward_fn(*input_tensors)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\models\bert\modeling_bert.py", line 523, in feed_forward_chunk
+    intermediate_output = self.intermediate(attention_output)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\models\bert\modeling_bert.py", line 425, in forward   
+    hidden_states = self.intermediate_act_fn(hidden_states)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\functional.py", line 1556, in gelu
+    return torch._C._nn.gelu(input)
+KeyboardInterrupt
+PS F:\YTPredictor> & C:/Users/noahd/AppData/Local/Microsoft/WindowsApps/python3.9.exe f:/YTPredictor/trainer.py
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.seq_relationship.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+(Iteration 0 / 124) loss: 63844.5780, val_acc: 0.058537
+(Iteration 1 / 124) loss: 175339.8087
+(Iteration 2 / 124) loss: 675513.6463
+(Iteration 3 / 124) loss: 135954.1541
+(Iteration 4 / 124) loss: 309316.9616
+(Iteration 5 / 124) loss: 520664.8198, val_acc: 0.009756
+(Iteration 6 / 124) loss: 79250.8490
+(Iteration 7 / 124) loss: 148196.0795
+(Iteration 8 / 124) loss: 276102.3075
+(Iteration 9 / 124) loss: 40727.0427
+Traceback (most recent call last):
+  File "f:\YTPredictor\trainer.py", line 96, in <module>
+    trainer.train()
+  File "f:\YTPredictor\trainer.py", line 52, in train
+    acc = self.validate()
+  File "f:\YTPredictor\trainer.py", line 33, in validate
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\utils\data\dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\utils\data\dataloader.py", line 561, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\utils\data\_utils\fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\utils\data\_utils\fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\utils\data\dataset.py", line 363, in __getitem__
+    return self.dataset[self.indices[idx]]
+  File "f:\YTPredictor\dataset.py", line 34, in __getitem__
+    img = self.transforms(img)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torchvision\transforms\transforms.py", line 61, in __call__        
+    img = t(img)
+    return forward_call(*input, **kwargs)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torchvision\transforms\transforms.py", line 919, in forward        
+    return F.resized_crop(img, i, j, h, w, self.size, self.interpolation)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torchvision\transforms\functional.py", line 566, in resized_crop   
+    img = resize(img, size, interpolation)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torchvision\transforms\functional.py", line 419, in resize
+    return F_pil.resize(img, size=size, interpolation=pil_interpolation, max_size=max_size)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torchvision\transforms\functional_pil.py", line 265, in resize     
+    return img.resize(size[::-1], interpolation)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\PIL\Image.py", line 2008, in resize
+    return self._new(self.im.resize(size, resample, box))
+KeyboardInterrupt
+PS F:\YTPredictor> & C:/Users/noahd/AppData/Local/Microsoft/WindowsApps/python3.9.exe f:/YTPredictor/trainer.py
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Traceback (most recent call last):
+  File "f:\YTPredictor\trainer.py", line 98, in <module>
+    trainer.train()
+  File "f:\YTPredictor\trainer.py", line 54, in train
+    acc = self.validate()
+  File "f:\YTPredictor\trainer.py", line 33, in validate
+    scores, view = None
+TypeError: cannot unpack non-iterable NoneType object
+PS F:\YTPredictor> & C:/Users/noahd/AppData/Local/Microsoft/WindowsApps/python3.9.exe f:/YTPredictor/trainer.py
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.decoder.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Traceback (most recent call last):
+  File "f:\YTPredictor\trainer.py", line 98, in <module>
+    trainer.train()
+  File "f:\YTPredictor\trainer.py", line 54, in train
+    acc = self.validate()
+  File "f:\YTPredictor\trainer.py", line 35, in validate
+    scores = self.model.forward(im, cap, subs)
+  File "f:\YTPredictor\model\predictor.py", line 33, in forward
+    title_feats = self.title_fe(title)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "f:\YTPredictor\model\title_fe.py", line 30, in forward
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\models\bert\modeling_bert.py", line 996, in forward   
+    encoder_outputs = self.encoder(
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\models\bert\modeling_bert.py", line 583, in forward   
+    layer_outputs = layer_module(
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\models\bert\modeling_bert.py", line 511, in forward   
+    layer_output = apply_chunking_to_forward(
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\modeling_utils.py", line 2360, in apply_chunking_to_forward
+    return forward_fn(*input_tensors)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\models\bert\modeling_bert.py", line 523, in feed_forward_chunk
+    intermediate_output = self.intermediate(attention_output)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\transformers\models\bert\modeling_bert.py", line 424, in forward   
+    hidden_states = self.dense(hidden_states)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\linear.py", line 103, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\functional.py", line 1848, in linear
+    return torch._C._nn.linear(input, weight, bias)
+PS F:\YTPredictor> & C:/Users/noahd/AppData/Local/Microsoft/WindowsApps/python3.9.exe f:/YTPredictor/trainer.py
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.seq_relationship.weight', 'cls.predictions.transform.dense.weight', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.decoder.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Traceback (most recent call last):
+  File "f:\YTPredictor\trainer.py", line 98, in <module>
+    trainer.train()
+  File "f:\YTPredictor\trainer.py", line 48, in train
+    loss = self.model.loss(images, captions, subs, views)
+  File "f:\YTPredictor\model\predictor.py", line 43, in loss
+    feat = self.forward(image, title, subs)
+  File "f:\YTPredictor\model\predictor.py", line 40, in forward
+    return self.regression_model(feat)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\container.py", line 141, in forward
+    input = module(input)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\batchnorm.py", line 168, in forward
+    return F.batch_norm(
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\functional.py", line 2282, in batch_norm
+    return torch.batch_norm(
+RuntimeError: expected scalar type Double but found Float
+PS F:\YTPredictor> & C:/Users/noahd/AppData/Local/Microsoft/WindowsApps/python3.9.exe f:/YTPredictor/trainer.py
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.decoder.weight', 'cls.predictions.bias', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.transform.LayerNorm.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+tensor([5, 3, 5, 3, 3]) tensor([2, 2, 2, 3, 3])
+(Iteration 0 / 124) loss: 0.3270, val_acc: 0.175610
+(Iteration 1 / 124) loss: 4.3271
+(Iteration 2 / 124) loss: 4.8382
+(Iteration 3 / 124) loss: 2.8033
+(Iteration 4 / 124) loss: 0.9856
+tensor([3, 2, 3, 2, 2]) tensor([2, 2, 2, 3, 3])
+(Iteration 5 / 124) loss: 1.6473, val_acc: 0.351220
+(Iteration 6 / 124) loss: 6.1079
+(Iteration 7 / 124) loss: 4.3640
+(Iteration 8 / 124) loss: 3.3449
+(Iteration 9 / 124) loss: 2.4911
+tensor([2, 5, 2, 5, 5]) tensor([2, 2, 2, 3, 3])
+(Iteration 10 / 124) loss: 1.0500, val_acc: 0.214634
+(Iteration 11 / 124) loss: 1.7174
+(Iteration 12 / 124) loss: 1.9746
+(Iteration 13 / 124) loss: 1.5551
+(Iteration 14 / 124) loss: 1.6926
+tensor([2, 1, 2, 1, 1]) tensor([2, 2, 2, 3, 3])
+(Iteration 15 / 124) loss: 1.4008, val_acc: 0.307317
+(Iteration 16 / 124) loss: 1.0816
+(Iteration 17 / 124) loss: 1.2842
+(Iteration 18 / 124) loss: 1.3179
+(Iteration 19 / 124) loss: 0.8515
+tensor([3, 2, 3, 2, 2]) tensor([2, 2, 2, 3, 3])
+(Iteration 20 / 124) loss: 1.1542, val_acc: 0.336585
+(Iteration 21 / 124) loss: 0.9898
+(Iteration 22 / 124) loss: 0.8117
+(Iteration 23 / 124) loss: 0.9234
+(Iteration 24 / 124) loss: 0.8146
+tensor([4, 2, 4, 3, 3]) tensor([2, 2, 2, 3, 3])
+(Iteration 25 / 124) loss: 0.6930, val_acc: 0.175610
+(Iteration 26 / 124) loss: 3.5210
+(Iteration 27 / 124) loss: 1.5728
+(Iteration 28 / 124) loss: 1.4679
+(Iteration 29 / 124) loss: 0.8151
+tensor([5, 5, 5, 5, 5]) tensor([2, 2, 2, 3, 3])
+(Iteration 30 / 124) loss: 0.5150, val_acc: 0.102439
+(Iteration 31 / 124) loss: 1.1692
+(Iteration 32 / 124) loss: 1.2857
+(Iteration 33 / 124) loss: 0.9407
+(Iteration 34 / 124) loss: 0.5659
+tensor([3, 1, 3, 1, 1]) tensor([2, 2, 2, 3, 3])
+(Iteration 35 / 124) loss: 0.5920, val_acc: 0.209756
+(Iteration 36 / 124) loss: 0.8013
+(Iteration 37 / 124) loss: 0.8265
+(Iteration 38 / 124) loss: 0.5880
+(Iteration 39 / 124) loss: 0.4724
+Traceback (most recent call last):
+  File "f:\YTPredictor\trainer.py", line 98, in <module>
+    trainer.train()
+  File "f:\YTPredictor\trainer.py", line 54, in train
+  File "f:\YTPredictor\trainer.py", line 35, in validate
+    scores = self.model.forward(im, cap, subs)
+  File "f:\YTPredictor\model\predictor.py", line 34, in forward
+    img_feats = self.image_fe(image)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "f:\YTPredictor\model\image_fe.py", line 28, in forward
+    return self.model(x).type(self.dtype)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\container.py", line 141, in forward
+    input = module(input)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\container.py", line 141, in forward
+    input = module(input)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torchvision\models\resnet.py", line 75, in forward
+    out = self.bn2(out)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\module.py", line 1102, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\modules\batchnorm.py", line 168, in forward
+    return F.batch_norm(
+  File "C:\Users\noahd\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\torch\nn\functional.py", line 2282, in batch_norm
+    return torch.batch_norm(
+KeyboardInterrupt
+PS F:\YTPredictor> & C:/Users/noahd/AppData/Local/Microsoft/WindowsApps/python3.9.exe f:/YTPredictor/trainer.py
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.bias', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+tensor([5, 4, 5, 5, 5]) tensor([5, 3, 2, 3, 2])
+(Iteration 0 / 13) loss: 0.4080, val_acc: 0.200000
+(Iteration 1 / 13) loss: 0.2481
+(Iteration 2 / 13) loss: 0.3058
+(Iteration 3 / 13) loss: 0.2678
+(Iteration 4 / 13) loss: 0.2411
+tensor([4, 3, 4, 4, 4]) tensor([5, 3, 2, 3, 2])
+(Iteration 5 / 13) loss: 0.2498, val_acc: 0.429268
+(Iteration 6 / 13) loss: 0.2168
+(Iteration 7 / 13) loss: 0.1980
+(Iteration 8 / 13) loss: 0.2152
+(Iteration 9 / 13) loss: 0.2329
+tensor([0, 5, 3, 0, 0]) tensor([5, 3, 2, 3, 2])
+(Iteration 10 / 13) loss: 0.2424, val_acc: 0.307317
+(Iteration 11 / 13) loss: 0.2362
+(Iteration 12 / 13) loss: 0.2581
+(Epoch 1 / 100) loss: 0.2581 time per epoch: 108.0s
+tensor([0, 5, 0, 0, 0]) tensor([5, 3, 2, 3, 2])
+(Iteration 0 / 13) loss: 0.2245, val_acc: 0.268293
+(Iteration 1 / 13) loss: 0.1943
+(Iteration 2 / 13) loss: 0.2065
+(Iteration 3 / 13) loss: 0.1974
+(Iteration 4 / 13) loss: 0.1878
+tensor([5, 3, 5, 5, 5]) tensor([5, 3, 2, 3, 2])
+(Iteration 5 / 13) loss: 0.2016, val_acc: 0.375610
+(Iteration 6 / 13) loss: 0.1991
+(Iteration 7 / 13) loss: 0.1860
+(Iteration 8 / 13) loss: 0.1966
+(Iteration 9 / 13) loss: 0.2174
+tensor([2, 0, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 10 / 13) loss: 0.2036, val_acc: 0.404878
+(Iteration 11 / 13) loss: 0.1907
+(Iteration 12 / 13) loss: 0.2031
+(Epoch 2 / 100) loss: 0.2031 time per epoch: 107.8s
+tensor([2, 5, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 0 / 13) loss: 0.1890, val_acc: 0.507317
+(Iteration 1 / 13) loss: 0.1801
+(Iteration 2 / 13) loss: 0.2022
+(Iteration 3 / 13) loss: 0.1976
+(Iteration 4 / 13) loss: 0.1849
+tensor([0, 5, 0, 0, 0]) tensor([5, 3, 2, 3, 2])
+(Iteration 5 / 13) loss: 0.1945, val_acc: 0.331707
+(Iteration 6 / 13) loss: 0.1941
+(Iteration 7 / 13) loss: 0.1887
+(Iteration 8 / 13) loss: 0.2065
+(Iteration 9 / 13) loss: 0.2071
+tensor([5, 2, 5, 5, 5]) tensor([5, 3, 2, 3, 2])
+(Iteration 10 / 13) loss: 0.1968, val_acc: 0.341463
+(Iteration 11 / 13) loss: 0.1862
+(Iteration 12 / 13) loss: 0.2014
+(Epoch 3 / 100) loss: 0.2014 time per epoch: 107.9s
+tensor([2, 3, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 0 / 13) loss: 0.1833, val_acc: 0.531707
+(Iteration 1 / 13) loss: 0.1790
+(Iteration 2 / 13) loss: 0.1837
+(Iteration 3 / 13) loss: 0.1978
+(Iteration 4 / 13) loss: 0.1824
+tensor([2, 5, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 5 / 13) loss: 0.1982, val_acc: 0.512195
+(Iteration 6 / 13) loss: 0.1928
+(Iteration 7 / 13) loss: 0.1935
+(Iteration 8 / 13) loss: 0.2071
+(Iteration 9 / 13) loss: 0.1959
+tensor([2, 0, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 10 / 13) loss: 0.1942, val_acc: 0.463415
+(Iteration 11 / 13) loss: 0.1915
+(Iteration 12 / 13) loss: 0.2370
+(Epoch 4 / 100) loss: 0.2370 time per epoch: 106.6s
+tensor([5, 3, 2, 5, 5]) tensor([5, 3, 2, 3, 2])
+(Iteration 0 / 13) loss: 0.2111, val_acc: 0.419512
+(Iteration 1 / 13) loss: 0.1905
+(Iteration 2 / 13) loss: 0.2297
+(Iteration 3 / 13) loss: 0.1994
+(Iteration 4 / 13) loss: 0.1984
+tensor([2, 5, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 5 / 13) loss: 0.1918, val_acc: 0.482927
+(Iteration 6 / 13) loss: 0.2042
+(Iteration 7 / 13) loss: 0.1904
+(Iteration 8 / 13) loss: 0.2299
+(Iteration 9 / 13) loss: 0.2177
+tensor([3, 2, 3, 3, 3]) tensor([5, 3, 2, 3, 2])
+(Iteration 10 / 13) loss: 0.2047, val_acc: 0.385366
+(Iteration 11 / 13) loss: 0.1979
+(Iteration 12 / 13) loss: 0.2190
+(Epoch 5 / 100) loss: 0.2190 time per epoch: 107.1s
+tensor([5, 3, 2, 5, 5]) tensor([5, 3, 2, 3, 2])
+(Iteration 0 / 13) loss: 0.2057, val_acc: 0.429268
+(Iteration 1 / 13) loss: 0.1968
+(Iteration 2 / 13) loss: 0.2274
+(Iteration 3 / 13) loss: 0.2067
+(Iteration 4 / 13) loss: 0.2139
+tensor([4, 0, 2, 4, 4]) tensor([5, 3, 2, 3, 2])
+(Iteration 5 / 13) loss: 0.2481, val_acc: 0.478049
+(Iteration 6 / 13) loss: 0.2112
+(Iteration 7 / 13) loss: 0.2006
+(Iteration 8 / 13) loss: 0.2152
+(Iteration 9 / 13) loss: 0.2376
+tensor([2, 1, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 10 / 13) loss: 0.2249, val_acc: 0.473171
+(Iteration 11 / 13) loss: 0.1995
+(Iteration 12 / 13) loss: 0.2179
+(Epoch 6 / 100) loss: 0.2179 time per epoch: 108.7s
+tensor([2, 4, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 0 / 13) loss: 0.2140, val_acc: 0.492683
+(Iteration 1 / 13) loss: 0.1798
+(Iteration 2 / 13) loss: 0.2044
+(Iteration 3 / 13) loss: 0.2125
+(Iteration 4 / 13) loss: 0.1918
+tensor([2, 3, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 5 / 13) loss: 0.2013, val_acc: 0.497561
+(Iteration 6 / 13) loss: 0.1858
+(Iteration 7 / 13) loss: 0.1897
+(Iteration 8 / 13) loss: 0.1920
+(Iteration 9 / 13) loss: 0.2096
+tensor([3, 2, 2, 3, 3]) tensor([5, 3, 2, 3, 2])
+(Iteration 10 / 13) loss: 0.2106, val_acc: 0.424390
+(Iteration 11 / 13) loss: 0.1971
+(Iteration 12 / 13) loss: 0.2225
+(Epoch 7 / 100) loss: 0.2225 time per epoch: 104.3s
+tensor([1, 2, 2, 1, 4]) tensor([5, 3, 2, 3, 2])
+(Iteration 0 / 13) loss: 0.1990, val_acc: 0.448780
+(Iteration 1 / 13) loss: 0.1891
+(Iteration 2 / 13) loss: 0.2165
+(Iteration 3 / 13) loss: 0.2040
+(Iteration 4 / 13) loss: 0.1936
+tensor([2, 3, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 5 / 13) loss: 0.2222, val_acc: 0.502439
+(Iteration 6 / 13) loss: 0.1987
+(Iteration 7 / 13) loss: 0.1916
+(Iteration 8 / 13) loss: 0.1932
+(Iteration 9 / 13) loss: 0.2072
+tensor([0, 5, 2, 0, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 10 / 13) loss: 0.2117, val_acc: 0.492683
+(Iteration 11 / 13) loss: 0.1942
+(Iteration 12 / 13) loss: 0.2198
+(Epoch 8 / 100) loss: 0.2198 time per epoch: 104.5s
+tensor([2, 5, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 0 / 13) loss: 0.2027, val_acc: 0.517073
+(Iteration 1 / 13) loss: 0.1892
+(Iteration 2 / 13) loss: 0.2032
+(Iteration 3 / 13) loss: 0.1885
+(Iteration 4 / 13) loss: 0.1858
+tensor([2, 0, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 5 / 13) loss: 0.1781, val_acc: 0.502439
+(Iteration 6 / 13) loss: 0.1761
+(Iteration 7 / 13) loss: 0.1785
+(Iteration 8 / 13) loss: 0.1779
+(Iteration 9 / 13) loss: 0.2014
+tensor([2, 0, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 10 / 13) loss: 0.2030, val_acc: 0.507317
+(Iteration 11 / 13) loss: 0.1935
+(Iteration 12 / 13) loss: 0.2044
+(Epoch 9 / 100) loss: 0.2044 time per epoch: 101.4s
+tensor([2, 0, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 0 / 13) loss: 0.1911, val_acc: 0.512195
+(Iteration 1 / 13) loss: 0.1780
+(Iteration 2 / 13) loss: 0.1895
+(Iteration 3 / 13) loss: 0.1870
+(Iteration 4 / 13) loss: 0.2076
+tensor([0, 5, 2, 0, 0]) tensor([5, 3, 2, 3, 2])
+(Iteration 5 / 13) loss: 0.2280, val_acc: 0.497561
+(Iteration 6 / 13) loss: 0.2119
+(Iteration 7 / 13) loss: 0.1961
+(Iteration 8 / 13) loss: 0.2131
+(Iteration 9 / 13) loss: 0.2029
+tensor([0, 2, 2, 0, 0]) tensor([5, 3, 2, 3, 2])
+(Iteration 10 / 13) loss: 0.1928, val_acc: 0.507317
+(Iteration 11 / 13) loss: 0.1949
+(Iteration 12 / 13) loss: 0.1923
+(Epoch 10 / 100) loss: 0.1923 time per epoch: 103.7s
+tensor([2, 4, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 0 / 13) loss: 0.1881, val_acc: 0.512195
+(Iteration 1 / 13) loss: 0.1815
+(Iteration 2 / 13) loss: 0.1856
+(Iteration 3 / 13) loss: 0.1867
+(Iteration 4 / 13) loss: 0.1911
+tensor([2, 3, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 5 / 13) loss: 0.2085, val_acc: 0.531707
+(Iteration 6 / 13) loss: 0.1862
+(Iteration 7 / 13) loss: 0.1783
+(Iteration 8 / 13) loss: 0.1811
+(Iteration 9 / 13) loss: 0.1864
+tensor([4, 3, 2, 4, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 10 / 13) loss: 0.1879, val_acc: 0.517073
+(Iteration 11 / 13) loss: 0.1853
+(Iteration 12 / 13) loss: 0.1985
+(Epoch 11 / 100) loss: 0.1985 time per epoch: 99.7s
+tensor([0, 2, 2, 0, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 0 / 13) loss: 0.1825, val_acc: 0.512195
+(Iteration 1 / 13) loss: 0.1797
+(Iteration 2 / 13) loss: 0.1746
+(Iteration 3 / 13) loss: 0.1820
+(Iteration 4 / 13) loss: 0.1784
+tensor([2, 3, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 5 / 13) loss: 0.1902, val_acc: 0.521951
+(Iteration 6 / 13) loss: 0.1814
+(Iteration 7 / 13) loss: 0.1804
+(Iteration 8 / 13) loss: 0.1806
+(Iteration 9 / 13) loss: 0.1829
+tensor([0, 3, 0, 0, 0]) tensor([5, 3, 2, 3, 2])
+(Iteration 10 / 13) loss: 0.1860, val_acc: 0.502439
+(Iteration 11 / 13) loss: 0.1932
+(Iteration 12 / 13) loss: 0.1946
+(Epoch 12 / 100) loss: 0.1946 time per epoch: 104.0s
+tensor([4, 2, 2, 4, 0]) tensor([5, 3, 2, 3, 2])
+(Iteration 0 / 13) loss: 0.1818, val_acc: 0.512195
+(Iteration 1 / 13) loss: 0.1798
+(Iteration 2 / 13) loss: 0.1833
+(Iteration 3 / 13) loss: 0.1810
+(Iteration 4 / 13) loss: 0.1764
+tensor([3, 0, 2, 3, 3]) tensor([5, 3, 2, 3, 2])
+(Iteration 5 / 13) loss: 0.1866, val_acc: 0.507317
+(Iteration 6 / 13) loss: 0.1819
+(Iteration 7 / 13) loss: 0.1810
+(Iteration 8 / 13) loss: 0.1817
+(Iteration 9 / 13) loss: 0.1914
+tensor([2, 0, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 10 / 13) loss: 0.1894, val_acc: 0.502439
+(Iteration 11 / 13) loss: 0.1789
+(Iteration 12 / 13) loss: 0.1810
+(Epoch 13 / 100) loss: 0.1810 time per epoch: 99.1s
+tensor([2, 5, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 0 / 13) loss: 0.1728, val_acc: 0.507317
+(Iteration 1 / 13) loss: 0.1782
+(Iteration 2 / 13) loss: 0.1820
+(Iteration 3 / 13) loss: 0.1840
+(Iteration 4 / 13) loss: 0.2015
+tensor([2, 4, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 5 / 13) loss: 0.1945, val_acc: 0.429268
+(Iteration 6 / 13) loss: 0.1880
+(Iteration 7 / 13) loss: 0.1815
+(Iteration 8 / 13) loss: 0.1830
+(Iteration 9 / 13) loss: 0.1847
+tensor([2, 3, 2, 0, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 10 / 13) loss: 0.1864, val_acc: 0.390244
+(Iteration 11 / 13) loss: 0.1844
+(Iteration 12 / 13) loss: 0.1844
+(Epoch 14 / 100) loss: 0.1844 time per epoch: 99.1s
+tensor([2, 5, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 0 / 13) loss: 0.1815, val_acc: 0.502439
+(Iteration 1 / 13) loss: 0.1770
+(Iteration 2 / 13) loss: 0.1868
+(Iteration 3 / 13) loss: 0.1885
+(Iteration 4 / 13) loss: 0.1798
+tensor([2, 0, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 5 / 13) loss: 0.1995, val_acc: 0.458537
+(Iteration 6 / 13) loss: 0.1891
+(Iteration 7 / 13) loss: 0.1821
+(Iteration 8 / 13) loss: 0.1843
+(Iteration 9 / 13) loss: 0.1817
+tensor([2, 3, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 10 / 13) loss: 0.1790, val_acc: 0.487805
+(Iteration 11 / 13) loss: 0.1786
+(Iteration 12 / 13) loss: 0.1753
+(Epoch 15 / 100) loss: 0.1753 time per epoch: 98.8s
+tensor([0, 2, 0, 0, 0]) tensor([5, 3, 2, 3, 2])
+(Iteration 0 / 13) loss: 0.1739, val_acc: 0.370732
+(Iteration 1 / 13) loss: 0.1792
+(Iteration 2 / 13) loss: 0.1773
+(Iteration 3 / 13) loss: 0.1825
+(Iteration 4 / 13) loss: 0.1771
+tensor([0, 2, 0, 0, 0]) tensor([5, 3, 2, 3, 2])
+(Iteration 5 / 13) loss: 0.1824, val_acc: 0.443902
+(Iteration 6 / 13) loss: 0.1774
+(Iteration 7 / 13) loss: 0.1753
+(Iteration 8 / 13) loss: 0.1754
+(Iteration 9 / 13) loss: 0.1811
+tensor([2, 4, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 10 / 13) loss: 0.1814, val_acc: 0.512195
+(Iteration 11 / 13) loss: 0.1777
+(Iteration 12 / 13) loss: 0.1797
+(Epoch 16 / 100) loss: 0.1797 time per epoch: 99.0s
+tensor([2, 0, 2, 2, 2]) tensor([5, 3, 2, 3, 2])
+(Iteration 0 / 13) loss: 0.1713, val_acc: 0.497561
+
+tensor([10,  5,  8, 10,  5]) tensor([8, 1, 2, 7, 0])
+(Iteration 0 / 13) loss: 0.1881, val_acc: 0.082927
+(Iteration 1 / 13) loss: 0.1874
+(Iteration 2 / 13) loss: 0.1793
+(Iteration 3 / 13) loss: 0.1742
+(Iteration 4 / 13) loss: 0.1666
+tensor([10,  5,  9, 10,  5]) tensor([8, 1, 2, 7, 0])
+(Iteration 5 / 13) loss: 0.1616, val_acc: 0.082927
+(Iteration 6 / 13) loss: 0.1593
+(Iteration 7 / 13) loss: 0.1591
+(Iteration 8 / 13) loss: 0.1495
+(Iteration 9 / 13) loss: 0.1619
+tensor([10,  9,  9,  7,  5]) tensor([8, 1, 2, 7, 0])
+(Iteration 10 / 13) loss: 0.1491, val_acc: 0.078049
+(Iteration 11 / 13) loss: 0.1444
+(Iteration 12 / 13) loss: 0.1376
+(Epoch 2 / 50) loss: 0.1376 time per epoch: 101.4s
+tensor([10,  9,  9, 10,  5]) tensor([8, 1, 2, 7, 0])
+(Iteration 0 / 13) loss: 0.1318, val_acc: 0.068293
+(Iteration 1 / 13) loss: 0.1344
+(Iteration 2 / 13) loss: 0.1310
+(Iteration 3 / 13) loss: 0.1241
+(Iteration 4 / 13) loss: 0.1187
+tensor([10,  5,  1, 10,  5]) tensor([8, 1, 2, 7, 0])
+(Iteration 5 / 13) loss: 0.1170, val_acc: 0.180488
+(Iteration 6 / 13) loss: 0.1287
+(Iteration 7 / 13) loss: 0.1285
+(Iteration 8 / 13) loss: 0.1235
+(Iteration 9 / 13) loss: 0.1234
+tensor([10,  5,  8,  2,  5]) tensor([8, 1, 2, 7, 0])
+(Iteration 10 / 13) loss: 0.1135, val_acc: 0.151220
+(Iteration 11 / 13) loss: 0.1146
+(Iteration 12 / 13) loss: 0.1209
+(Epoch 3 / 50) loss: 0.1209 time per epoch: 102.4s
+tensor([2, 4, 9, 0, 5]) tensor([8, 1, 2, 7, 0])
+(Iteration 0 / 13) loss: 0.1104, val_acc: 0.112195
+(Iteration 1 / 13) loss: 0.1133
+(Iteration 2 / 13) loss: 0.1155
+(Iteration 3 / 13) loss: 0.1141
+(Iteration 4 / 13) loss: 0.1166
+tensor([8, 5, 0, 8, 5]) tensor([8, 1, 2, 7, 0])
+(Iteration 5 / 13) loss: 0.1110, val_acc: 0.087805
+(Iteration 6 / 13) loss: 0.1170
+(Iteration 7 / 13) loss: 0.1174
+(Iteration 8 / 13) loss: 0.1108
+(Iteration 9 / 13) loss: 0.1136
+tensor([6, 5, 1, 6, 5]) tensor([8, 1, 2, 7, 0])
+(Iteration 10 / 13) loss: 0.1044, val_acc: 0.092683
+(Iteration 11 / 13) loss: 0.1071
+(Iteration 12 / 13) loss: 0.1064
+(Epoch 4 / 50) loss: 0.1064 time per epoch: 101.4s
+tensor([6, 1, 1, 6, 1]) tensor([8, 1, 2, 7, 0])
+(Iteration 0 / 13) loss: 0.1111, val_acc: 0.146341
+(Iteration 1 / 13) loss: 0.1165
+(Iteration 2 / 13) loss: 0.1144
+(Iteration 3 / 13) loss: 0.1113
+(Iteration 4 / 13) loss: 0.1092
+tensor([10,  6,  0, 10,  6]) tensor([8, 1, 2, 7, 0])
+(Iteration 5 / 13) loss: 0.1054, val_acc: 0.078049
+(Iteration 6 / 13) loss: 0.1119
+(Iteration 7 / 13) loss: 0.1146
+(Iteration 8 / 13) loss: 0.1084
+(Iteration 9 / 13) loss: 0.1116
+tensor([1, 2, 2, 1, 5]) tensor([8, 1, 2, 7, 0])
+(Iteration 10 / 13) loss: 0.1076, val_acc: 0.151220
+(Iteration 11 / 13) loss: 0.1090
+(Iteration 12 / 13) loss: 0.1037
+(Epoch 5 / 50) loss: 0.1037 time per epoch: 101.3s
+tensor([5, 1, 0, 5, 6]) tensor([8, 1, 2, 7, 0])
+(Iteration 0 / 13) loss: 0.1051, val_acc: 0.078049
+(Iteration 1 / 13) loss: 0.1083
+(Iteration 2 / 13) loss: 0.1110
+(Iteration 3 / 13) loss: 0.1063
+(Iteration 4 / 13) loss: 0.1043
+tensor([1, 4, 1, 5, 4]) tensor([8, 1, 2, 7, 0])
+(Iteration 5 / 13) loss: 0.1032, val_acc: 0.131707
+(Iteration 6 / 13) loss: 0.1062
+(Iteration 7 / 13) loss: 0.1058
+(Iteration 8 / 13) loss: 0.1047
+(Iteration 9 / 13) loss: 0.1148
+tensor([7, 1, 1, 7, 8]) tensor([8, 1, 2, 7, 0])
+(Iteration 10 / 13) loss: 0.1053, val_acc: 0.136585
+(Iteration 11 / 13) loss: 0.1041
+(Iteration 12 / 13) loss: 0.1044
+(Epoch 6 / 50) loss: 0.1044 time per epoch: 102.3s
+tensor([7, 1, 1, 0, 1]) tensor([8, 1, 2, 7, 0])
+(Iteration 0 / 13) loss: 0.1068, val_acc: 0.082927
+(Iteration 1 / 13) loss: 0.1077
+(Iteration 2 / 13) loss: 0.1058
+(Iteration 3 / 13) loss: 0.1021
+(Iteration 4 / 13) loss: 0.1012
+tensor([1, 0, 0, 1, 0]) tensor([8, 1, 2, 7, 0])
+(Iteration 5 / 13) loss: 0.1026, val_acc: 0.097561
+(Iteration 6 / 13) loss: 0.1078
+(Iteration 7 / 13) loss: 0.1079
+
+tensor([7, 2, 7, 3, 2]) tensor([6, 7, 8, 4, 4])
+(Iteration 0 / 13) loss: 2.5230, val_acc: 0.170732
+(Iteration 1 / 13) loss: 2.4688
+(Iteration 2 / 13) loss: 2.2942
+(Iteration 3 / 13) loss: 2.3895
+(Iteration 4 / 13) loss: 2.5953
+tensor([7, 5, 7, 6, 3]) tensor([6, 7, 8, 4, 4])
+(Iteration 5 / 13) loss: 2.4767, val_acc: 0.165854
+(Iteration 6 / 13) loss: 2.4008
+(Iteration 7 / 13) loss: 2.5304
+(Iteration 8 / 13) loss: 2.5155
+(Iteration 9 / 13) loss: 2.4327
+tensor([5, 1, 5, 3, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 10 / 13) loss: 2.4961, val_acc: 0.229268
+(Iteration 11 / 13) loss: 2.3242
+(Iteration 12 / 13) loss: 2.3246
+(Epoch 1 / 50) loss: 2.3246 time per epoch: 99.9s
+tensor([5, 1, 5, 3, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 0 / 13) loss: 2.3351, val_acc: 0.160976
+(Iteration 1 / 13) loss: 2.3617
+(Iteration 2 / 13) loss: 2.2954
+(Iteration 3 / 13) loss: 2.3777
+(Iteration 4 / 13) loss: 2.3525
+tensor([5, 1, 6, 3, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 5 / 13) loss: 2.2689, val_acc: 0.136585
+(Iteration 6 / 13) loss: 2.2508
+(Iteration 7 / 13) loss: 2.4419
+(Iteration 8 / 13) loss: 2.3090
+(Iteration 9 / 13) loss: 2.3313
+tensor([5, 1, 5, 3, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 10 / 13) loss: 2.3932, val_acc: 0.126829
+(Iteration 11 / 13) loss: 2.2222
+(Iteration 12 / 13) loss: 2.2214
+(Epoch 2 / 50) loss: 2.2214 time per epoch: 101.6s
+tensor([5, 1, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 0 / 13) loss: 2.2328, val_acc: 0.136585
+(Iteration 1 / 13) loss: 2.2450
+(Iteration 2 / 13) loss: 2.2468
+(Iteration 3 / 13) loss: 2.2588
+(Iteration 4 / 13) loss: 2.2650
+tensor([5, 5, 5, 8, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 5 / 13) loss: 2.2587, val_acc: 0.170732
+(Iteration 6 / 13) loss: 2.1749
+(Iteration 7 / 13) loss: 2.3336
+(Iteration 8 / 13) loss: 2.3039
+(Iteration 9 / 13) loss: 2.2783
+tensor([5, 5, 5, 3, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 10 / 13) loss: 2.4104, val_acc: 0.151220
+(Iteration 11 / 13) loss: 2.1694
+(Iteration 12 / 13) loss: 2.1570
+(Epoch 3 / 50) loss: 2.1570 time per epoch: 101.2s
+tensor([5, 1, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 0 / 13) loss: 2.1829, val_acc: 0.175610
+(Iteration 1 / 13) loss: 2.2525
+(Iteration 2 / 13) loss: 2.2682
+(Iteration 3 / 13) loss: 2.2019
+(Iteration 4 / 13) loss: 2.2632
+tensor([5, 3, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 5 / 13) loss: 2.2354, val_acc: 0.170732
+(Iteration 6 / 13) loss: 2.0728
+(Iteration 7 / 13) loss: 2.3159
+(Iteration 8 / 13) loss: 2.2137
+(Iteration 9 / 13) loss: 2.2081
+tensor([5, 3, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 10 / 13) loss: 2.3739, val_acc: 0.175610
+(Iteration 11 / 13) loss: 2.1204
+(Iteration 12 / 13) loss: 2.0052
+(Epoch 4 / 50) loss: 2.0052 time per epoch: 101.8s
+tensor([5, 3, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 0 / 13) loss: 2.1493, val_acc: 0.214634
+(Iteration 1 / 13) loss: 2.1363
+(Iteration 2 / 13) loss: 2.2040
+(Iteration 3 / 13) loss: 2.1737
+(Iteration 4 / 13) loss: 2.1583
+tensor([3, 3, 3, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 5 / 13) loss: 2.2187, val_acc: 0.219512
+(Iteration 6 / 13) loss: 1.9906
+(Iteration 7 / 13) loss: 2.2351
+(Iteration 8 / 13) loss: 2.1749
+(Iteration 9 / 13) loss: 2.1819
+tensor([3, 3, 3, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 10 / 13) loss: 2.3389, val_acc: 0.175610
+(Iteration 11 / 13) loss: 2.0940
+(Iteration 12 / 13) loss: 2.1208
+(Epoch 5 / 50) loss: 2.1208 time per epoch: 102.1s
+tensor([5, 5, 5, 4, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 0 / 13) loss: 2.0853, val_acc: 0.165854
+(Iteration 1 / 13) loss: 2.1351
+(Iteration 2 / 13) loss: 2.1594
+(Iteration 3 / 13) loss: 2.2183
+(Iteration 4 / 13) loss: 2.0981
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 5 / 13) loss: 2.1489, val_acc: 0.170732
+(Iteration 6 / 13) loss: 2.0014
+(Iteration 7 / 13) loss: 2.1791
+(Iteration 8 / 13) loss: 2.1449
+(Iteration 9 / 13) loss: 2.1296
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 10 / 13) loss: 2.3425, val_acc: 0.180488
+(Iteration 11 / 13) loss: 2.0513
+(Iteration 12 / 13) loss: 1.9461
+(Epoch 6 / 50) loss: 1.9461 time per epoch: 101.7s
+tensor([4, 5, 4, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 0 / 13) loss: 2.0763, val_acc: 0.195122
+(Iteration 1 / 13) loss: 2.0969
+(Iteration 2 / 13) loss: 2.1398
+(Iteration 3 / 13) loss: 2.1246
+(Iteration 4 / 13) loss: 2.0880
+tensor([4, 5, 4, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 5 / 13) loss: 2.1411, val_acc: 0.204878
+(Iteration 6 / 13) loss: 1.9359
+(Iteration 7 / 13) loss: 2.2261
+(Iteration 8 / 13) loss: 2.1032
+(Iteration 9 / 13) loss: 2.0984
+tensor([5, 5, 4, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 10 / 13) loss: 2.3111, val_acc: 0.160976
+(Iteration 11 / 13) loss: 2.0520
+(Iteration 12 / 13) loss: 1.9317
+(Epoch 7 / 50) loss: 1.9317 time per epoch: 100.2s
+tensor([5, 5, 4, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 0 / 13) loss: 2.0187, val_acc: 0.175610
+(Iteration 1 / 13) loss: 2.0414
+(Iteration 2 / 13) loss: 2.0554
+(Iteration 3 / 13) loss: 2.1257
+(Iteration 4 / 13) loss: 2.1274
+tensor([5, 5, 4, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 5 / 13) loss: 2.1248, val_acc: 0.190244
+(Iteration 6 / 13) loss: 1.9176
+(Iteration 7 / 13) loss: 2.1638
+(Iteration 8 / 13) loss: 2.1101
+(Iteration 9 / 13) loss: 2.0956
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 10 / 13) loss: 2.2816, val_acc: 0.170732
+(Iteration 11 / 13) loss: 2.0437
+(Iteration 12 / 13) loss: 1.9333
+(Epoch 8 / 50) loss: 1.9333 time per epoch: 100.9s
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 0 / 13) loss: 2.0114, val_acc: 0.170732
+(Iteration 1 / 13) loss: 2.0296
+(Iteration 2 / 13) loss: 2.0245
+(Iteration 3 / 13) loss: 2.1087
+(Iteration 4 / 13) loss: 2.1134
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 5 / 13) loss: 2.0822, val_acc: 0.156098
+(Iteration 6 / 13) loss: 1.9327
+(Iteration 7 / 13) loss: 2.1398
+(Iteration 8 / 13) loss: 2.0826
+(Iteration 9 / 13) loss: 2.0652
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 10 / 13) loss: 2.2765, val_acc: 0.170732
+(Iteration 11 / 13) loss: 2.0306
+(Iteration 12 / 13) loss: 1.9353
+(Epoch 9 / 50) loss: 1.9353 time per epoch: 101.4s
+tensor([5, 5, 4, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 0 / 13) loss: 2.0027, val_acc: 0.195122
+(Iteration 1 / 13) loss: 2.0008
+(Iteration 2 / 13) loss: 2.0277
+(Iteration 3 / 13) loss: 2.0866
+(Iteration 4 / 13) loss: 2.0211
+tensor([5, 5, 4, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 5 / 13) loss: 2.0691, val_acc: 0.165854
+(Iteration 6 / 13) loss: 1.9214
+(Iteration 7 / 13) loss: 2.1299
+(Iteration 8 / 13) loss: 2.1429
+(Iteration 9 / 13) loss: 2.1252
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 10 / 13) loss: 2.2830, val_acc: 0.151220
+(Iteration 11 / 13) loss: 2.0191
+(Iteration 12 / 13) loss: 1.9719
+(Epoch 10 / 50) loss: 1.9719 time per epoch: 100.8s
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 0 / 13) loss: 1.9858, val_acc: 0.160976
+(Iteration 1 / 13) loss: 1.9829
+(Iteration 2 / 13) loss: 2.0210
+(Iteration 3 / 13) loss: 2.0994
+(Iteration 4 / 13) loss: 2.0786
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 5 / 13) loss: 2.0976, val_acc: 0.180488
+(Iteration 6 / 13) loss: 1.8959
+(Iteration 7 / 13) loss: 2.1352
+(Iteration 8 / 13) loss: 2.0845
+(Iteration 9 / 13) loss: 2.0826
+tensor([5, 1, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 10 / 13) loss: 2.2550, val_acc: 0.131707
+(Iteration 11 / 13) loss: 2.0228
+(Iteration 12 / 13) loss: 1.9059
+(Epoch 11 / 50) loss: 1.9059 time per epoch: 102.3s
+tensor([5, 1, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 0 / 13) loss: 2.0067, val_acc: 0.151220
+(Iteration 1 / 13) loss: 1.9947
+(Iteration 2 / 13) loss: 2.0773
+(Iteration 3 / 13) loss: 2.0716
+(Iteration 4 / 13) loss: 2.0896
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 5 / 13) loss: 2.0892, val_acc: 0.165854
+(Iteration 6 / 13) loss: 1.8941
+(Iteration 7 / 13) loss: 2.2800
+(Iteration 8 / 13) loss: 2.0438
+(Iteration 9 / 13) loss: 2.0590
+tensor([5, 1, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 10 / 13) loss: 2.1997, val_acc: 0.156098
+(Iteration 11 / 13) loss: 2.0486
+(Iteration 12 / 13) loss: 1.9306
+(Epoch 12 / 50) loss: 1.9306 time per epoch: 102.0s
+tensor([5, 4, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 0 / 13) loss: 2.0168, val_acc: 0.165854
+(Iteration 1 / 13) loss: 2.0091
+(Iteration 2 / 13) loss: 2.0474
+(Iteration 3 / 13) loss: 2.0840
+(Iteration 4 / 13) loss: 2.0385
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 5 / 13) loss: 2.0735, val_acc: 0.190244
+(Iteration 6 / 13) loss: 1.9132
+(Iteration 7 / 13) loss: 2.2382
+(Iteration 8 / 13) loss: 2.0149
+(Iteration 9 / 13) loss: 2.0360
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 10 / 13) loss: 2.1707, val_acc: 0.180488
+(Iteration 11 / 13) loss: 2.0498
+(Iteration 12 / 13) loss: 1.9076
+(Epoch 13 / 50) loss: 1.9076 time per epoch: 102.2s
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 0 / 13) loss: 1.9834, val_acc: 0.170732
+(Iteration 1 / 13) loss: 1.9742
+(Iteration 2 / 13) loss: 2.0020
+(Iteration 3 / 13) loss: 2.0919
+(Iteration 4 / 13) loss: 1.9887
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 5 / 13) loss: 2.0957, val_acc: 0.170732
+(Iteration 6 / 13) loss: 1.9027
+(Iteration 7 / 13) loss: 2.2310
+(Iteration 8 / 13) loss: 2.0383
+(Iteration 9 / 13) loss: 2.0488
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 10 / 13) loss: 2.2017, val_acc: 0.175610
+(Iteration 11 / 13) loss: 2.0253
+(Iteration 12 / 13) loss: 1.8979
+(Epoch 14 / 50) loss: 1.8979 time per epoch: 103.4s
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 0 / 13) loss: 1.9578, val_acc: 0.195122
+(Iteration 1 / 13) loss: 1.9585
+(Iteration 2 / 13) loss: 1.9945
+(Iteration 3 / 13) loss: 2.0655
+(Iteration 4 / 13) loss: 2.0072
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 5 / 13) loss: 2.0907, val_acc: 0.160976
+(Iteration 6 / 13) loss: 1.8944
+(Iteration 7 / 13) loss: 2.2364
+(Iteration 8 / 13) loss: 2.0194
+(Iteration 9 / 13) loss: 2.0448
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 10 / 13) loss: 2.1826, val_acc: 0.175610
+(Iteration 11 / 13) loss: 2.0554
+(Iteration 12 / 13) loss: 1.9044
+(Epoch 15 / 50) loss: 1.9044 time per epoch: 100.6s
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 0 / 13) loss: 1.9749, val_acc: 0.195122
+(Iteration 1 / 13) loss: 1.9647
+(Iteration 2 / 13) loss: 1.9891
+(Iteration 3 / 13) loss: 2.0639
+(Iteration 4 / 13) loss: 2.0081
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 5 / 13) loss: 2.0919, val_acc: 0.185366
+(Iteration 6 / 13) loss: 1.9022
+(Iteration 7 / 13) loss: 2.2328
+(Iteration 8 / 13) loss: 2.0082
+(Iteration 9 / 13) loss: 2.0430
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 10 / 13) loss: 2.1712, val_acc: 0.170732
+(Iteration 11 / 13) loss: 2.0442
+(Iteration 12 / 13) loss: 1.9012
+(Epoch 16 / 50) loss: 1.9012 time per epoch: 102.4s
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 0 / 13) loss: 1.9589, val_acc: 0.180488
+(Iteration 1 / 13) loss: 1.9664
+(Iteration 2 / 13) loss: 1.9866
+(Iteration 3 / 13) loss: 2.0727
+(Iteration 4 / 13) loss: 2.0080
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 5 / 13) loss: 2.0796, val_acc: 0.170732
+(Iteration 6 / 13) loss: 1.8943
+(Iteration 7 / 13) loss: 2.2080
+(Iteration 8 / 13) loss: 2.0109
+(Iteration 9 / 13) loss: 2.0415
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 10 / 13) loss: 2.1747, val_acc: 0.180488
+(Iteration 11 / 13) loss: 2.0371
+(Iteration 12 / 13) loss: 1.8887
+(Epoch 17 / 50) loss: 1.8887 time per epoch: 101.0s
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 0 / 13) loss: 1.9591, val_acc: 0.185366
+(Iteration 1 / 13) loss: 1.9639
+(Iteration 2 / 13) loss: 1.9916
+(Iteration 3 / 13) loss: 2.0643
+(Iteration 4 / 13) loss: 1.9997
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 5 / 13) loss: 2.0799, val_acc: 0.170732
+(Iteration 6 / 13) loss: 1.8943
+(Iteration 7 / 13) loss: 2.2203
+(Iteration 8 / 13) loss: 2.0067
+(Iteration 9 / 13) loss: 2.0413
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 10 / 13) loss: 2.1696, val_acc: 0.170732
+(Iteration 11 / 13) loss: 2.0455
+(Iteration 12 / 13) loss: 1.9051
+(Epoch 18 / 50) loss: 1.9051 time per epoch: 100.9s
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 0 / 13) loss: 1.9608, val_acc: 0.190244
+(Iteration 1 / 13) loss: 1.9588
+(Iteration 2 / 13) loss: 1.9897
+(Iteration 3 / 13) loss: 2.0642
+(Iteration 4 / 13) loss: 1.9897
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 5 / 13) loss: 2.0862, val_acc: 0.175610
+(Iteration 6 / 13) loss: 1.8913
+(Iteration 7 / 13) loss: 2.2221
+(Iteration 8 / 13) loss: 1.9982
+(Iteration 9 / 13) loss: 2.0356
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 10 / 13) loss: 2.1660, val_acc: 0.165854
+(Iteration 11 / 13) loss: 2.0372
+(Iteration 12 / 13) loss: 1.8895
+(Epoch 19 / 50) loss: 1.8895 time per epoch: 101.9s
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 0 / 13) loss: 1.9608, val_acc: 0.175610
+(Iteration 1 / 13) loss: 1.9536
+(Iteration 2 / 13) loss: 1.9862
+(Iteration 3 / 13) loss: 2.0643
+(Iteration 4 / 13) loss: 1.9831
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 5 / 13) loss: 2.0782, val_acc: 0.190244
+(Iteration 6 / 13) loss: 1.8927
+(Iteration 7 / 13) loss: 2.2138
+(Iteration 8 / 13) loss: 1.9956
+(Iteration 9 / 13) loss: 2.0359
+tensor([5, 5, 5, 5, 1]) tensor([6, 7, 8, 4, 4])
+(Iteration 10 / 13) loss: 2.1622, val_acc: 0.175610
+(Iteration 11 / 13) loss: 2.0287
+(Iteration 12 / 13) loss: 1.891
+
+tensor([2, 2, 2, 2, 2]) tensor([3, 0, 6, 7, 2])
+(Iteration 0 / 13) loss: 88162.4464, val_acc: 0.136585
+(Iteration 1 / 13) loss: 138796.9287
+(Iteration 2 / 13) loss: 99890.7679
+(Iteration 3 / 13) loss: 67559.9606
+(Iteration 4 / 13) loss: 57506.3878
+tensor([4, 4, 4, 4, 4]) tensor([3, 0, 6, 7, 2])
+(Iteration 5 / 13) loss: 118212.2560, val_acc: 0.165854
+(Iteration 6 / 13) loss: 99874.3160
+(Iteration 7 / 13) loss: 54688.0099
+(Iteration 8 / 13) loss: 41643.1365
+(Iteration 9 / 13) loss: 25373.8389
+tensor([7, 7, 7, 7, 7]) tensor([3, 0, 6, 7, 2])
+(Iteration 10 / 13) loss: 34713.5399, val_acc: 0.087805
+(Iteration 11 / 13) loss: 10912.8501
+(Iteration 12 / 13) loss: 25482.3269
+(Epoch 1 / 50) loss: 25482.3269 time per epoch: 100.7s
+tensor([5, 5, 5, 5, 5]) tensor([3, 0, 6, 7, 2])
+(Iteration 0 / 13) loss: 42411.5817, val_acc: 0.160976
+(Iteration 1 / 13) loss: 24154.8053
+(Iteration 2 / 13) loss: 35875.2345
+(Iteration 3 / 13) loss: 10725.1854
+(Iteration 4 / 13) loss: 24268.5159
+tensor([3, 5, 3, 3, 3]) tensor([3, 0, 6, 7, 2])
+(Iteration 5 / 13) loss: 10738.7978, val_acc: 0.200000
+(Iteration 6 / 13) loss: 27122.9584
+(Iteration 7 / 13) loss: 20215.2783
+(Iteration 8 / 13) loss: 33593.7601
+(Iteration 9 / 13) loss: 48537.3310
+tensor([5, 5, 5, 5, 5]) tensor([3, 0, 6, 7, 2])
+(Iteration 10 / 13) loss: 46027.3672, val_acc: 0.160976
+(Iteration 11 / 13) loss: 6617.6782
+(Iteration 12 / 13) loss: 44830.3305
+(Epoch 2 / 50) loss: 44830.3305 time per epoch: 104.6s
+tensor([6, 6, 4, 4, 4]) tensor([3, 0, 6, 7, 2])
+(Iteration 0 / 13) loss: 42624.8897, val_acc: 0.165854
+(Iteration 1 / 13) loss: 17184.8295
+(Iteration 2 / 13) loss: 18795.7481
+(Iteration 3 / 13) loss: 13840.8957
+(Iteration 4 / 13) loss: 25291.9144
+tensor([6, 6, 6, 6, 6]) tensor([3, 0, 6, 7, 2])
+(Iteration 5 / 13) loss: 34004.2558, val_acc: 0.107317
+(Iteration 6 / 13) loss: 50588.4582
+(Iteration 7 / 13) loss: 18233.8521
+(Iteration 8 / 13) loss: 30540.7496
+(Iteration 9 / 13) loss: 29561.0123
+
+Iteration 0 / 13) loss: 2.9306, val_acc: 0.087805
+(Iteration 1 / 13) loss: 2.6084
+(Iteration 2 / 13) loss: 2.4547
+(Iteration 3 / 13) loss: 2.5839
+(Iteration 4 / 13) loss: 2.5500
+tensor([5, 5, 7, 5, 5]) tensor([5, 3, 6, 4, 5])
+(Iteration 5 / 13) loss: 2.4024, val_acc: 0.239024
+(Iteration 6 / 13) loss: 2.5121
+(Iteration 7 / 13) loss: 2.4704
+(Iteration 8 / 13) loss: 2.5042
+(Iteration 9 / 13) loss: 2.3859
+tensor([ 5,  5, 10,  5,  5]) tensor([5, 3, 6, 4, 5])
+(Iteration 10 / 13) loss: 2.4250, val_acc: 0.209756
+(Iteration 11 / 13) loss: 2.3692
+(Iteration 12 / 13) loss: 2.3915
+(Epoch 1 / 50) loss: 2.3915 time per epoch: 99.4s
+tensor([1, 1, 8, 1, 1]) tensor([5, 3, 6, 4, 5])
+(Iteration 0 / 13) loss: 2.3298, val_acc: 0.195122
+(Iteration 1 / 13) loss: 2.3506
+(Iteration 2 / 13) loss: 2.3582
+(Iteration 3 / 13) loss: 2.3337
+(Iteration 4 / 13) loss: 2.4037
+tensor([1, 1, 8, 1, 1]) tensor([5, 3, 6, 4, 5])
+(Iteration 5 / 13) loss: 2.3553, val_acc: 0.165854
+(Iteration 6 / 13) loss: 2.4692
+(Iteration 7 / 13) loss: 2.2869
+(Iteration 8 / 13) loss: 2.3856
+(Iteration 9 / 13) loss: 2.2737
+tensor([1, 1, 8, 1, 1]) tensor([5, 3, 6, 4, 5])
+(Iteration 10 / 13) loss: 2.3352, val_acc: 0.175610
+(Iteration 11 / 13) loss: 2.3562
+(Iteration 12 / 13) loss: 2.2620
+(Epoch 2 / 50) loss: 2.2620 time per epoch: 102.4s
+tensor([1, 1, 8, 1, 1]) tensor([5, 3, 6, 4, 5])
+(Iteration 0 / 13) loss: 2.2575, val_acc: 0.126829
+(Iteration 1 / 13) loss: 2.3596
+(Iteration 2 / 13) loss: 2.2879
+(Iteration 3 / 13) loss: 2.3092
+(Iteration 4 / 13) loss: 2.4155
+
+tensor([6, 0, 0, 6, 0]) tensor([3, 2, 2, 2, 3])
+(Iteration 0 / 13) loss: 2.3311, val_acc: 0.068293
+(Iteration 1 / 13) loss: 2.3161
+(Iteration 2 / 13) loss: 2.2945
+(Iteration 3 / 13) loss: 2.2979
+(Iteration 4 / 13) loss: 2.3150
+tensor([3, 2, 2, 3, 2]) tensor([3, 2, 2, 2, 3])
+(Iteration 5 / 13) loss: 2.2149, val_acc: 0.268293
+(Iteration 6 / 13) loss: 2.1895
+(Iteration 7 / 13) loss: 2.2509
+(Iteration 8 / 13) loss: 2.1541
+(Iteration 9 / 13) loss: 2.1182
+tensor([3, 2, 2, 3, 2]) tensor([3, 2, 2, 2, 3])
+(Iteration 10 / 13) loss: 2.1772, val_acc: 0.287805
+(Iteration 11 / 13) loss: 2.1198
+(Iteration 12 / 13) loss: 2.1481
+(Epoch 1 / 50) loss: 2.1481 time per epoch: 95.4s
+tensor([5, 2, 2, 5, 2]) tensor([3, 2, 2, 2, 3])
+(Iteration 0 / 13) loss: 2.1064, val_acc: 0.297561
+(Iteration 1 / 13) loss: 2.2241
+(Iteration 2 / 13) loss: 2.2662
+(Iteration 3 / 13) loss: 2.1934
+(Iteration 4 / 13) loss: 2.0965
+tensor([5, 2, 2, 5, 2]) tensor([3, 2, 2, 2, 3])
+(Iteration 5 / 13) loss: 1.9423, val_acc: 0.282927
+(Iteration 6 / 13) loss: 1.9655
+(Iteration 7 / 13) loss: 2.2410
+(Iteration 8 / 13) loss: 2.1249
+(Iteration 9 / 13) loss: 2.0749
+tensor([3, 2, 2, 3, 2]) tensor([3, 2, 2, 2, 3])
+(Iteration 10 / 13) loss: 2.1327, val_acc: 0.278049
+(Iteration 11 / 13) loss: 2.0115
+(Iteration 12 / 13) loss: 2.1193
+(Epoch 2 / 50) loss: 2.1193 time per epoch: 100.4s
+tensor([3, 2, 2, 7, 2]) tensor([3, 2, 2, 2, 3])
+(Iteration 0 / 13) loss: 2.0068, val_acc: 0.282927
+(Iteration 1 / 13) loss: 2.1464
+(Iteration 2 / 13) loss: 2.2036
+(Iteration 3 / 13) loss: 2.1477
+(Iteration 4 / 13) loss: 2.0247
+tensor([5, 2, 2, 5, 2]) tensor([3, 2, 2, 2, 3])
+(Iteration 5 / 13) loss: 1.8310, val_acc: 0.287805
+(Iteration 6 / 13) loss: 1.8895
+(Iteration 7 / 13) loss: 2.1869
+(Iteration 8 / 13) loss: 2.0139
+(Iteration 9 / 13) loss: 2.0061
+tensor([3, 2, 2, 5, 2]) tensor([3, 2, 2, 2, 3])
+(Iteration 10 / 13) loss: 2.0660, val_acc: 0.278049
+(Iteration 11 / 13) loss: 1.9549
+(Iteration 12 / 13) loss: 2.0799
+(Epoch 3 / 50) loss: 2.0799 time per epoch: 100.5s
+tensor([3, 2, 2, 7, 2]) tensor([3, 2, 2, 2, 3])
+(Iteration 0 / 13) loss: 1.9804, val_acc: 0.297561
+(Iteration 1 / 13) loss: 2.1113
+(Iteration 2 / 13) loss: 2.1193
+(Iteration 3 / 13) loss: 2.1266
+(Iteration 4 / 13) loss: 2.0165
+tensor([3, 2, 2, 6, 2]) tensor([3, 2, 2, 2, 3])
+(Iteration 5 / 13) loss: 1.8640, val_acc: 0.287805
+(Iteration 6 / 13) loss: 1.8708
+(Iteration 7 / 13) loss: 2.1020
+(Iteration 8 / 13) loss: 1.9278
+(Iteration 9 / 13) loss: 1.9943
+tensor([3, 2, 2, 3, 2]) tensor([3, 2, 2, 2, 3])
+(Iteration 10 / 13) loss: 2.0451, val_acc: 0.273171
+(Iteration 11 / 13) loss: 1.9600
+(Iteration 12 / 13) loss: 2.0734
+
+tensor([0, 5, 5, 0, 0]) tensor([4, 6, 5, 4, 7])
+(Iteration 0 / 13) loss: 2.3398, val_acc: 0.087805
+(Iteration 1 / 13) loss: 2.2314, train_acc: 0.140000
+(Iteration 2 / 13) loss: 2.2726, train_acc: 0.120000
+(Iteration 3 / 13) loss: 2.2959, train_acc: 0.105000
+(Iteration 4 / 13) loss: 2.1526, train_acc: 0.136000
+tensor([0, 7, 3, 0, 0]) tensor([4, 6, 5, 4, 7])
+(Iteration 5 / 13) loss: 2.2862, val_acc: 0.204878
+(Iteration 6 / 13) loss: 2.0655, train_acc: 0.145714
+(Iteration 7 / 13) loss: 2.1744, train_acc: 0.172500
+(Iteration 8 / 13) loss: 2.1313, train_acc: 0.180000
+(Iteration 9 / 13) loss: 2.0704, train_acc: 0.200000
+tensor([2, 7, 7, 2, 2]) tensor([4, 6, 5, 4, 7])
+(Iteration 10 / 13) loss: 2.1231, val_acc: 0.253659
+(Iteration 11 / 13) loss: 2.1649, train_acc: 0.220000
+(Iteration 12 / 13) loss: 1.9308, train_acc: 0.225284
+(Epoch 1 / 15) loss: 1.9308 time per epoch: 99.4s
+tensor([2, 6, 6, 2, 2]) tensor([4, 6, 5, 4, 7])
+(Iteration 0 / 13) loss: 2.1300, val_acc: 0.243902
+(Iteration 1 / 13) loss: 2.1384, train_acc: 0.230000
+(Iteration 2 / 13) loss: 2.0388, train_acc: 0.260000
+(Iteration 3 / 13) loss: 2.1390, train_acc: 0.250000
+(Iteration 4 / 13) loss: 1.9921, train_acc: 0.244000
+tensor([2, 6, 6, 2, 2]) tensor([4, 6, 5, 4, 7])
+(Iteration 5 / 13) loss: 2.1722, val_acc: 0.234146
+(Iteration 6 / 13) loss: 1.8638, train_acc: 0.285714
+(Iteration 7 / 13) loss: 2.0971, train_acc: 0.297500
+(Iteration 8 / 13) loss: 2.0607, train_acc: 0.295556
+(Iteration 9 / 13) loss: 1.9572, train_acc: 0.304000
+tensor([2, 3, 3, 2, 2]) tensor([4, 6, 5, 4, 7])
+(Iteration 10 / 13) loss: 1.9450, val_acc: 0.258537
+(Iteration 11 / 13) loss: 2.0326, train_acc: 0.305000
+(Iteration 12 / 13) loss: 1.7482, train_acc: 0.309562
+(Epoch 2 / 15) loss: 1.7482 time per epoch: 103.6s
+tensor([2, 6, 6, 2, 2]) tensor([4, 6, 5, 4, 7])
+(Iteration 0 / 13) loss: 2.0865, val_acc: 0.239024
+(Iteration 1 / 13) loss: 2.1392, train_acc: 0.250000
+(Iteration 2 / 13) loss: 1.9860, train_acc: 0.273333
+(Iteration 3 / 13) loss: 2.0772, train_acc: 0.255000
+(Iteration 4 / 13) loss: 1.9456, train_acc: 0.244000
+tensor([2, 7, 7, 2, 2]) tensor([4, 6, 5, 4, 7])
+(Iteration 5 / 13) loss: 2.1199, val_acc: 0.263415
+(Iteration 6 / 13) loss: 1.8277, train_acc: 0.280000
+(Iteration 7 / 13) loss: 2.0052, train_acc: 0.295000
+(Iteration 8 / 13) loss: 2.0224, train_acc: 0.293333
+(Iteration 9 / 13) loss: 1.8913, train_acc: 0.302000
+tensor([2, 3, 3, 2, 2]) tensor([4, 6, 5, 4, 7])
+(Iteration 10 / 13) loss: 1.8771, val_acc: 0.248780
+(Iteration 11 / 13) loss: 2.0152, train_acc: 0.303333
+(Iteration 12 / 13) loss: 1.7666, train_acc: 0.307942
+(Epoch 3 / 15) loss: 1.7666 time per epoch: 102.5s
+tensor([2, 3, 3, 2, 2]) tensor([4, 6, 5, 4, 7])
+(Iteration 0 / 13) loss: 2.0355, val_acc: 0.263415
+(Iteration 1 / 13) loss: 2.0055, train_acc: 0.260000
+(Iteration 2 / 13) loss: 1.9213, train_acc: 0.293333
+(Iteration 3 / 13) loss: 2.0110, train_acc: 0.270000
+(Iteration 4 / 13) loss: 1.9425, train_acc: 0.264000
+tensor([2, 7, 3, 2, 2]) tensor([4, 6, 5, 4, 7])
+(Iteration 5 / 13) loss: 2.0962, val_acc: 0.268293
+(Iteration 6 / 13) loss: 1.7994, train_acc: 0.302857
+(Iteration 7 / 13) loss: 1.9672, train_acc: 0.312500
+(Iteration 8 / 13) loss: 2.0055, train_acc: 0.311111
+(Iteration 9 / 13) loss: 1.9192, train_acc: 0.320000
+tensor([2, 0, 5, 2, 2]) tensor([4, 6, 5, 4, 7])
+(Iteration 10 / 13) loss: 1.9024, val_acc: 0.248780
+(Iteration 11 / 13) loss: 1.9911, train_acc: 0.318333
+(Iteration 12 / 13) loss: 1.8403, train_acc: 0.320908
+(Epoch 4 / 15) loss: 1.8403 time per epoch: 104.6s
+tensor([2, 5, 5, 2, 2]) tensor([4, 6, 5, 4, 7])
+(Iteration 0 / 13) loss: 2.0282, val_acc: 0.253659
+(Iteration 1 / 13) loss: 2.0000, train_acc: 0.290000
+(Iteration 2 / 13) loss: 1.9292, train_acc: 0.306667
+(Iteration 3 / 13) loss: 2.0215, train_acc: 0.275000
+(Iteration 4 / 13) loss: 1.9913, train_acc: 0.260000
+tensor([2, 0, 0, 2, 2]) tensor([4, 6, 5, 4, 7])
+(Iteration 5 / 13) loss: 2.0198, val_acc: 0.229268
+(Iteration 6 / 13) loss: 1.8274, train_acc: 0.294286
+(Iteration 7 / 13) loss: 1.9366, train_acc: 0.305000
+(Iteration 8 / 13) loss: 2.0282, train_acc: 0.304444
+(Iteration 9 / 13) loss: 1.9314, train_acc: 0.316000
+tensor([2, 6, 6, 2, 2]) tensor([4, 6, 5, 4, 7])
+(Iteration 10 / 13) loss: 1.9527, val_acc: 0.239024
+(Iteration 11 / 13) loss: 1.9564, train_acc: 0.315000
+(Iteration 12 / 13) loss: 1.7557, train_acc: 0.319287
+(Epoch 5 / 15) loss: 1.7557 time per epoch: 106.3s
+tensor([2, 6, 3, 2, 2]) tensor([4, 6, 5, 4, 7])
+(Iteration 0 / 13) loss: 2.0490, val_acc: 0.243902
+(Iteration 1 / 13) loss: 2.0622, train_acc: 0.270000
+(Iteration 2 / 13) loss: 1.8888, train_acc: 0.293333
+(Iteration 3 / 13) loss: 1.9513, train_acc: 0.270000
+(Iteration 4 / 13) loss: 1.8990, train_acc: 0.256000
+tensor([2, 3, 3, 2, 2]) tensor([4, 6, 5, 4, 7])
+(Iteration 5 / 13) loss: 1.9933, val_acc: 0.253659
+(Iteration 6 / 13) loss: 1.6846, train_acc: 0.300000
+(Iteration 7 / 13) loss: 1.8740, train_acc: 0.310000
+(Iteration 8 / 13) loss: 1.9559, train_acc: 0.304444
+(Iteration 9 / 13) loss: 1.7875, train_acc: 0.316000
+
+tensor([0, 4, 4, 0, 0]) tensor([3, 2, 2, 3, 5])
+(Iteration 0 / 13) loss: 1.9910, val_acc: 0.229268
+(Iteration 1 / 13) loss: 2.0128, train_acc: 0.060000
+(Iteration 2 / 13) loss: 2.0126, train_acc: 0.100000
+(Iteration 3 / 13) loss: 2.0391, train_acc: 0.150000
+(Iteration 4 / 13) loss: 1.8792, train_acc: 0.208000
+tensor([3, 5, 5, 3, 3]) tensor([3, 2, 2, 3, 5])
+(Iteration 5 / 13) loss: 1.7166, val_acc: 0.292683
+(Iteration 6 / 13) loss: 1.8311, train_acc: 0.217143
+(Iteration 7 / 13) loss: 1.8810, train_acc: 0.212500
+(Iteration 8 / 13) loss: 1.8442, train_acc: 0.235556
+(Iteration 9 / 13) loss: 1.9337, train_acc: 0.240000
+tensor([2, 5, 5, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 10 / 13) loss: 1.8464, val_acc: 0.380488
+(Iteration 11 / 13) loss: 1.9047, train_acc: 0.275000
+(Iteration 12 / 13) loss: 1.9470, train_acc: 0.277148
+(Epoch 1 / 15) loss: 1.9470 time per epoch: 96.6s
+tensor([2, 5, 5, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 0 / 13) loss: 1.8107, val_acc: 0.375610
+(Iteration 1 / 13) loss: 1.9442, train_acc: 0.440000
+(Iteration 2 / 13) loss: 1.7792, train_acc: 0.466667
+(Iteration 3 / 13) loss: 1.8687, train_acc: 0.450000
+(Iteration 4 / 13) loss: 1.8406, train_acc: 0.420000
+tensor([2, 3, 3, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 5 / 13) loss: 1.6657, val_acc: 0.434146
+(Iteration 6 / 13) loss: 1.6817, train_acc: 0.460000
+(Iteration 7 / 13) loss: 1.8099, train_acc: 0.457500
+(Iteration 8 / 13) loss: 1.7798, train_acc: 0.453333
+(Iteration 9 / 13) loss: 1.8493, train_acc: 0.450000
+tensor([2, 3, 3, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 10 / 13) loss: 1.7188, val_acc: 0.443902
+(Iteration 11 / 13) loss: 1.8049, train_acc: 0.461667
+(Iteration 12 / 13) loss: 1.9464, train_acc: 0.458671
+(Epoch 2 / 15) loss: 1.9464 time per epoch: 101.9s
+tensor([2, 5, 5, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 0 / 13) loss: 1.6204, val_acc: 0.439024
+(Iteration 1 / 13) loss: 1.8356, train_acc: 0.480000
+(Iteration 2 / 13) loss: 1.6583, train_acc: 0.513333
+(Iteration 3 / 13) loss: 1.8282, train_acc: 0.470000
+(Iteration 4 / 13) loss: 1.7817, train_acc: 0.424000
+tensor([2, 5, 5, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 5 / 13) loss: 1.6276, val_acc: 0.439024
+(Iteration 6 / 13) loss: 1.5795, train_acc: 0.454286
+(Iteration 7 / 13) loss: 1.7056, train_acc: 0.455000
+(Iteration 8 / 13) loss: 1.6351, train_acc: 0.453333
+(Iteration 9 / 13) loss: 1.7516, train_acc: 0.440000
+tensor([3, 5, 5, 3, 3]) tensor([3, 2, 2, 3, 5])
+(Iteration 10 / 13) loss: 1.6336, val_acc: 0.370732
+(Iteration 11 / 13) loss: 1.7237, train_acc: 0.428333
+(Iteration 12 / 13) loss: 1.6234, train_acc: 0.434360
+(Epoch 3 / 15) loss: 1.6234 time per epoch: 104.0s
+tensor([3, 0, 0, 3, 3]) tensor([3, 2, 2, 3, 5])
+(Iteration 0 / 13) loss: 1.4832, val_acc: 0.360976
+(Iteration 1 / 13) loss: 1.7185, train_acc: 0.400000
+(Iteration 2 / 13) loss: 1.6092, train_acc: 0.433333
+(Iteration 3 / 13) loss: 1.7846, train_acc: 0.425000
+(Iteration 4 / 13) loss: 1.6704, train_acc: 0.400000
+tensor([2, 0, 0, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 5 / 13) loss: 1.5133, val_acc: 0.404878
+(Iteration 6 / 13) loss: 1.5424, train_acc: 0.388571
+(Iteration 7 / 13) loss: 1.6347, train_acc: 0.397500
+(Iteration 8 / 13) loss: 1.5680, train_acc: 0.400000
+(Iteration 9 / 13) loss: 1.6697, train_acc: 0.398000
+tensor([2, 0, 0, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 10 / 13) loss: 1.5301, val_acc: 0.439024
+(Iteration 11 / 13) loss: 1.5792, train_acc: 0.413333
+(Iteration 12 / 13) loss: 1.5085, train_acc: 0.413290
+(Epoch 4 / 15) loss: 1.5085 time per epoch: 103.3s
+tensor([2, 0, 0, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 0 / 13) loss: 1.4521, val_acc: 0.434146
+(Iteration 1 / 13) loss: 1.6170, train_acc: 0.490000
+(Iteration 2 / 13) loss: 1.4994, train_acc: 0.540000
+(Iteration 3 / 13) loss: 1.7094, train_acc: 0.495000
+(Iteration 4 / 13) loss: 1.6067, train_acc: 0.456000
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 5 / 13) loss: 1.3859, val_acc: 0.468293
+(Iteration 6 / 13) loss: 1.4049, train_acc: 0.477143
+(Iteration 7 / 13) loss: 1.5165, train_acc: 0.480000
+(Iteration 8 / 13) loss: 1.4737, train_acc: 0.475556
+(Iteration 9 / 13) loss: 1.5904, train_acc: 0.468000
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 10 / 13) loss: 1.4058, val_acc: 0.478049
+(Iteration 11 / 13) loss: 1.4381, train_acc: 0.475000
+(Iteration 12 / 13) loss: 1.3266, train_acc: 0.474878
+(Epoch 5 / 15) loss: 1.3266 time per epoch: 103.3s
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 0 / 13) loss: 1.2429, val_acc: 0.482927
+(Iteration 1 / 13) loss: 1.4626, train_acc: 0.510000
+(Iteration 2 / 13) loss: 1.2996, train_acc: 0.560000
+(Iteration 3 / 13) loss: 1.6084, train_acc: 0.510000
+(Iteration 4 / 13) loss: 1.4799, train_acc: 0.468000
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 5 / 13) loss: 1.2465, val_acc: 0.497561
+(Iteration 6 / 13) loss: 1.2203, train_acc: 0.497143
+(Iteration 7 / 13) loss: 1.4338, train_acc: 0.500000
+(Iteration 8 / 13) loss: 1.3988, train_acc: 0.493333
+(Iteration 9 / 13) loss: 1.4944, train_acc: 0.484000
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 10 / 13) loss: 1.3127, val_acc: 0.478049
+(Iteration 11 / 13) loss: 1.3230, train_acc: 0.488333
+(Iteration 12 / 13) loss: 1.2454, train_acc: 0.486224
+(Epoch 6 / 15) loss: 1.2454 time per epoch: 101.7s
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 0 / 13) loss: 1.2079, val_acc: 0.492683
+(Iteration 1 / 13) loss: 1.4110, train_acc: 0.510000
+(Iteration 2 / 13) loss: 1.2045, train_acc: 0.560000
+(Iteration 3 / 13) loss: 1.5788, train_acc: 0.510000
+(Iteration 4 / 13) loss: 1.4836, train_acc: 0.468000
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 5 / 13) loss: 1.2636, val_acc: 0.492683
+(Iteration 6 / 13) loss: 1.2092, train_acc: 0.494286
+(Iteration 7 / 13) loss: 1.4434, train_acc: 0.495000
+(Iteration 8 / 13) loss: 1.3455, train_acc: 0.491111
+(Iteration 9 / 13) loss: 1.4556, train_acc: 0.484000
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 10 / 13) loss: 1.2661, val_acc: 0.478049
+(Iteration 11 / 13) loss: 1.2358, train_acc: 0.490000
+(Iteration 12 / 13) loss: 1.1823, train_acc: 0.487844
+(Epoch 7 / 15) loss: 1.1823 time per epoch: 105.3s
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 0 / 13) loss: 1.2192, val_acc: 0.502439
+(Iteration 1 / 13) loss: 1.3471, train_acc: 0.510000
+(Iteration 2 / 13) loss: 1.1294, train_acc: 0.560000
+(Iteration 3 / 13) loss: 1.5197, train_acc: 0.510000
+(Iteration 4 / 13) loss: 1.4817, train_acc: 0.468000
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 5 / 13) loss: 1.2265, val_acc: 0.492683
+(Iteration 6 / 13) loss: 1.1170, train_acc: 0.500000
+(Iteration 7 / 13) loss: 1.3882, train_acc: 0.505000
+(Iteration 8 / 13) loss: 1.2928, train_acc: 0.502222
+(Iteration 9 / 13) loss: 1.4467, train_acc: 0.494000
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 10 / 13) loss: 1.2213, val_acc: 0.492683
+(Iteration 11 / 13) loss: 1.1933, train_acc: 0.500000
+(Iteration 12 / 13) loss: 1.1045, train_acc: 0.497569
+(Epoch 8 / 15) loss: 1.1045 time per epoch: 102.6s
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 0 / 13) loss: 1.2221, val_acc: 0.492683
+(Iteration 1 / 13) loss: 1.3371, train_acc: 0.510000
+(Iteration 2 / 13) loss: 1.1367, train_acc: 0.560000
+(Iteration 3 / 13) loss: 1.5386, train_acc: 0.510000
+(Iteration 4 / 13) loss: 1.4920, train_acc: 0.472000
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 5 / 13) loss: 1.2336, val_acc: 0.497561
+(Iteration 6 / 13) loss: 1.1316, train_acc: 0.502857
+(Iteration 7 / 13) loss: 1.3956, train_acc: 0.507500
+(Iteration 8 / 13) loss: 1.2943, train_acc: 0.504444
+(Iteration 9 / 13) loss: 1.4308, train_acc: 0.496000
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 10 / 13) loss: 1.2164, val_acc: 0.497561
+(Iteration 11 / 13) loss: 1.1844, train_acc: 0.503333
+(Iteration 12 / 13) loss: 1.0626, train_acc: 0.502431
+(Epoch 9 / 15) loss: 1.0626 time per epoch: 101.4s
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 0 / 13) loss: 1.2627, val_acc: 0.492683
+(Iteration 1 / 13) loss: 1.3193, train_acc: 0.470000
+(Iteration 2 / 13) loss: 1.1219, train_acc: 0.533333
+(Iteration 3 / 13) loss: 1.5416, train_acc: 0.490000
+(Iteration 4 / 13) loss: 1.4924, train_acc: 0.456000
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 5 / 13) loss: 1.2345, val_acc: 0.492683
+(Iteration 6 / 13) loss: 1.1144, train_acc: 0.488571
+(Iteration 7 / 13) loss: 1.4016, train_acc: 0.492500
+(Iteration 8 / 13) loss: 1.2584, train_acc: 0.491111
+(Iteration 9 / 13) loss: 1.4306, train_acc: 0.484000
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 10 / 13) loss: 1.2035, val_acc: 0.497561
+(Iteration 11 / 13) loss: 1.1676, train_acc: 0.493333
+(Iteration 12 / 13) loss: 1.0633, train_acc: 0.492707
+(Epoch 10 / 15) loss: 1.0633 time per epoch: 101.6s
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 0 / 13) loss: 1.1977, val_acc: 0.502439
+(Iteration 1 / 13) loss: 1.3010, train_acc: 0.510000
+(Iteration 2 / 13) loss: 1.0962, train_acc: 0.560000
+(Iteration 3 / 13) loss: 1.5134, train_acc: 0.510000
+(Iteration 4 / 13) loss: 1.4960, train_acc: 0.468000
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 5 / 13) loss: 1.2641, val_acc: 0.468293
+(Iteration 6 / 13) loss: 1.1514, train_acc: 0.485714
+(Iteration 7 / 13) loss: 1.3879, train_acc: 0.492500
+(Iteration 8 / 13) loss: 1.2826, train_acc: 0.488889
+(Iteration 9 / 13) loss: 1.4213, train_acc: 0.482000
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 10 / 13) loss: 1.2066, val_acc: 0.487805
+(Iteration 11 / 13) loss: 1.1721, train_acc: 0.490000
+(Iteration 12 / 13) loss: 1.0456, train_acc: 0.487844
+(Epoch 11 / 15) loss: 1.0456 time per epoch: 105.7s
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 0 / 13) loss: 1.2749, val_acc: 0.482927
+(Iteration 1 / 13) loss: 1.3087, train_acc: 0.450000
+(Iteration 2 / 13) loss: 1.1243, train_acc: 0.520000
+(Iteration 3 / 13) loss: 1.5375, train_acc: 0.480000
+(Iteration 4 / 13) loss: 1.5012, train_acc: 0.444000
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 5 / 13) loss: 1.2529, val_acc: 0.492683
+(Iteration 6 / 13) loss: 1.1278, train_acc: 0.480000
+(Iteration 7 / 13) loss: 1.3911, train_acc: 0.485000
+(Iteration 8 / 13) loss: 1.2592, train_acc: 0.484444
+(Iteration 9 / 13) loss: 1.4232, train_acc: 0.478000
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 10 / 13) loss: 1.2022, val_acc: 0.463415
+(Iteration 11 / 13) loss: 1.1726, train_acc: 0.490000
+(Iteration 12 / 13) loss: 1.0641, train_acc: 0.487844
+(Epoch 12 / 15) loss: 1.0641 time per epoch: 107.1s
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 0 / 13) loss: 1.3150, val_acc: 0.463415
+(Iteration 1 / 13) loss: 1.3070, train_acc: 0.450000
+(Iteration 2 / 13) loss: 1.1309, train_acc: 0.520000
+(Iteration 3 / 13) loss: 1.5207, train_acc: 0.480000
+(Iteration 4 / 13) loss: 1.4949, train_acc: 0.440000
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 5 / 13) loss: 1.3340, val_acc: 0.468293
+(Iteration 6 / 13) loss: 1.1547, train_acc: 0.460000
+(Iteration 7 / 13) loss: 1.4032, train_acc: 0.462500
+(Iteration 8 / 13) loss: 1.2679, train_acc: 0.464444
+(Iteration 9 / 13) loss: 1.4181, train_acc: 0.460000
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 10 / 13) loss: 1.2254, val_acc: 0.492683
+(Iteration 11 / 13) loss: 1.1722, train_acc: 0.473333
+(Iteration 12 / 13) loss: 1.0509, train_acc: 0.471637
+(Epoch 13 / 15) loss: 1.0509 time per epoch: 107.4s
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 0 / 13) loss: 1.2686, val_acc: 0.482927
+(Iteration 1 / 13) loss: 1.2916, train_acc: 0.470000
+(Iteration 2 / 13) loss: 1.1126, train_acc: 0.533333
+(Iteration 3 / 13) loss: 1.5330, train_acc: 0.490000
+(Iteration 4 / 13) loss: 1.4849, train_acc: 0.456000
+(Iteration 5 / 13) loss: 1.2250, val_acc: 0.468293
+(Iteration 6 / 13) loss: 1.1366, train_acc: 0.488571
+(Iteration 7 / 13) loss: 1.3908, train_acc: 0.492500
+(Iteration 8 / 13) loss: 1.2627, train_acc: 0.491111
+(Iteration 9 / 13) loss: 1.4014, train_acc: 0.484000
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 10 / 13) loss: 1.2182, val_acc: 0.473171
+(Iteration 11 / 13) loss: 1.1977, train_acc: 0.490000
+(Iteration 12 / 13) loss: 1.0392, train_acc: 0.489465
+(Epoch 14 / 15) loss: 1.0392 time per epoch: 101.6s
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 0 / 13) loss: 1.2622, val_acc: 0.473171
+(Iteration 1 / 13) loss: 1.3197, train_acc: 0.440000
+(Iteration 2 / 13) loss: 1.1274, train_acc: 0.513333
+(Iteration 3 / 13) loss: 1.5384, train_acc: 0.475000
+(Iteration 4 / 13) loss: 1.5007, train_acc: 0.440000
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 5 / 13) loss: 1.2465, val_acc: 0.492683
+(Iteration 6 / 13) loss: 1.1184, train_acc: 0.474286
+(Iteration 7 / 13) loss: 1.3871, train_acc: 0.480000
+(Iteration 8 / 13) loss: 1.2551, train_acc: 0.480000
+(Iteration 9 / 13) loss: 1.4155, train_acc: 0.474000
+tensor([2, 2, 2, 2, 2]) tensor([3, 2, 2, 3, 5])
+(Iteration 10 / 13) loss: 1.2229, val_acc: 0.492683
+(Iteration 11 / 13) loss: 1.1905, train_acc: 0.483333
+(Iteration 12 / 13) loss: 1.0759, train_acc: 0.481361
+(Epoch 15 / 15) loss: 1.0759 time per epoch: 102.7s
