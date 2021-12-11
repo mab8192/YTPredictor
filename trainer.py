@@ -235,7 +235,7 @@ if __name__ == '__main__':
     optimizer = optim.Adam(filter(lambda p: p.requires_grad, my_model.parameters()), learning_rate) # leave betas and eps by default
     lr_scheduler = optim.lr_scheduler.LambdaLR(optimizer, lambda epoch: lr_decay ** epoch)
     trainer = Trainer(model=my_model, train_data=train_data, val_data=val_data, optimizer=optimizer,
-                      scheduler=lr_scheduler, epochs=2, device=device, dtype=dtype, show_val=True, max_label=data.max_label)
+                      scheduler=lr_scheduler, epochs=10, device=device, dtype=dtype, show_val=True, max_label=data.max_label)
     my_model = trainer.train()
     # test_data, train_data, val_data = get_dataloader_splits(data, batch_size=32, train_percent=0.8, val_percent=0.1, test_percent=0.1)
     tester = Tester(model=my_model, test_data=test_data, device=device, dtype=dtype, max_label=data.max_label, round_to=10_000)
