@@ -52,20 +52,6 @@ class Trainer:
         self.checkpoint_dir = checkpoint_dir
         os.makedirs(checkpoint_dir, exist_ok=True)
 
-    # def validate(self):
-    #     num_correct, num_samples = 0, 0
-    #     with torch.no_grad():
-    #         for _, im, cap, view, subs in self.val_data:
-    #             im = im.to(device=self.device, dtype=self.dtype)
-    #             # cap = cap.to(device=self.device, dtype=self.dtype)
-    #             view = view.to(device=self.device, dtype=self.dtype)
-    #             subs = subs.to(device=self.device, dtype=self.dtype)
-    #             scores = self.model.forward(im, cap, subs)
-    #             num_correct += ((self.round_to * torch.round(self.max_label * scores / self.round_to)) ==
-    #                             (self.round_to * torch.round(self.max_label * view.unsqueeze(1) / self.round_to))).sum()
-    #             num_samples += scores.shape[0]
-    #     return num_correct / num_samples
-
     def validate(self):
         num_correct, num_samples = 0, 0
         box_correct = 0
@@ -221,25 +207,3 @@ def get_device():
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     print('using device:', device)
     return device
-
-
-if __name__ == '__main__':
-    dtype = torch.float
-    device = get_device()
-    # device = torch.device('cpu')
-    my_model = ViewCountPredictor(device=device, dtype=dtype)
-    base = '/home/corbin/Desktop/school/fall2021/deep/finalproject/YTPredictor'
-    my_model.load_state_dict(torch.load(base + '/model_checkpoints/model_10.pth'))
-    data = ThumbnailDataset(root="./youtube_api/", transforms=image_transforms['train'])
-    test_data, train_data, val_data = get_dataloader_splits(data, batch_size=32, train_percent=0.7, val_percent=0.15, test_percent=0.15)
-    learning_rate, lr_decay = 0.05, 0.5
-    optimizer = optim.Adam(filter(lambda p: p.requires_grad, my_model.parameters()), learning_rate) # leave betas and eps by default
-    lr_scheduler = optim.lr_scheduler.LambdaLR(optimizer, lambda epoch: lr_decay ** epoch)
-    trainer = Trainer(model=my_model, train_data=train_data, val_data=val_data, optimizer=optimizer,
-                      scheduler=lr_scheduler, epochs=10, device=device, dtype=dtype, show_val=True, max_label=data.max_label)
-    my_model = trainer.train()
-    # test_data, train_data, val_data = get_dataloader_splits(data, batch_size=32, train_percent=0.8, val_percent=0.1, test_percent=0.1)
-    tester = Tester(model=my_model, test_data=test_data, device=device, dtype=dtype, max_label=data.max_label, round_to=10_000)
-    tester.test()
-    pred = Predictor(model=my_model, test_data=test_data, dtype=dtype, device=device, max_label=data.max_label)
-    pred.predict()

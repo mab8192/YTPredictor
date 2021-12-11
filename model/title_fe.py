@@ -30,14 +30,3 @@ class TitleFeatureExtractor(nn.Module):
 
     def forward(self, input):
         return self.model.forward(**self.title_transform(list(input), padding=True))['pooler_output'].type(self.dtype)  # using last_hidden_state produces variable output sizes
-
-
-if __name__ == '__main__':
-    import pathlib
-    from model.dataset import ThumbnailDataset
-    my_model = TitleFeatureExtractor()
-    data = ThumbnailDataset(root=str(pathlib.Path(__file__).parent.resolve()) + '/../youtube_api/')
-    txt = data[0][1]
-    print(f'{txt=}')
-    feature = my_model([txt,])
-    print(f'{feature.shape=}')

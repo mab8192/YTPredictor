@@ -46,15 +46,3 @@ class ViewCountPredictor(nn.Module):
         # mults = self.mse_multiplier * torch.ones_like(feat, dtype=self.dtype, device=self.device)
         # return torch.var(feat - views.unsqueeze(1))
         return F.mse_loss(feat, views.unsqueeze(1))
-
-if __name__ == '__main__':
-    import pathlib
-
-    import ThumbnailDataset
-    from yt_transformers import image_transforms
-    my_model = ViewCountPredictor()
-    data = ThumbnailDataset(root=str(pathlib.Path(__file__).parent.resolve()) + '/../youtube_api/',
-                            transforms=image_transforms['train'])
-    feature = my_model(data[0][0].reshape((1, *data[0][0].shape)), data[0][1])
-    print(f'{feature.shape=}')
-    print(f'{feature=}')
