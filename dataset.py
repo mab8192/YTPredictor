@@ -34,7 +34,7 @@ class ThumbnailDataset(torch.utils.data.Dataset):
         img = Image.open(img_path).convert("RGB")
         img = self.transforms(img)
 
-        return video_id, img, (data['title'] if data['title'] else data['description']), data.get('viewCount', 0.)
+        return video_id, img, (data['title'] if data['title'] else data['description']), data.get('viewCount', 0.), float(data.get('subscriberCount', 0.)) # data.get('viewCount', 0.) #
 
     def __len__(self):
         return len(self.imgs)
@@ -44,7 +44,7 @@ class ThumbnailDataset(torch.utils.data.Dataset):
         vid_keys = {x.split('.jpg')[0] for x in self.imgs}
         max_count = max(self.video_data, key=lambda x: int(self.video_data[x].get('viewCount', 0)))
         max_count = float(self.video_data[max_count]['viewCount'])
-        self.max_label = max_count # math.sqrt(max_count)
+        self.max_label = 1. #math.log10(max_count) # math.sqrt(max_count)
         for key in self.video_data:
             if key not in vid_keys:
                 bad_keys.add(key)
@@ -55,7 +55,9 @@ class ThumbnailDataset(torch.utils.data.Dataset):
             if 'viewCount' not in self.video_data[key]:
                 bad_keys.add(key)
                 continue
-            self.video_data[key]['viewCount'] = float(self.video_data[key]['viewCount']) / self.max_label
+            self.video_data[key]['viewCount'] = math.log10(float(self.video_data[key]['viewCount']) + 1.) / self.max_label
+            self.video_data[key]['subscriberCount'] = math.log10(float(self.video_data[key]['subscriberCount']) + 1.)
+
         for key in bad_keys:
             self.video_data.pop(key)
             self.imgs.remove(f'{key}.jpg')

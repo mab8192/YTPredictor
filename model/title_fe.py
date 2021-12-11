@@ -20,11 +20,13 @@ class TitleFeatureExtractor(nn.Module):
         self.dtype = dtype
         assert model_name in model_set, f'Model "{model_name}" is not a valid pre-trained model'
         self.model = AutoModel.from_pretrained(f'{model_name}-base-uncased')
-        self.model.eval()
+        # self.model.eval()
         self.title_transform = TitleTransform(model_name)
         self.output_shape = tuple(self('sample text').shape[1:])
         if fine_tune:
             self.model.train()
+        for param in self.model.parameters():
+            param.requires_grad = False
 
     def forward(self, input):
         return self.model.forward(**self.title_transform(list(input), padding=True))['pooler_output'].type(self.dtype)  # using last_hidden_state produces variable output sizes

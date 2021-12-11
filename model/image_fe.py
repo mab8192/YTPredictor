@@ -20,7 +20,9 @@ class ImageFeatureExtractor(nn.Module):
         assert model_name in model_set, f'Model "{model_name}" is not a valid pre-trained model'
         pretrained_model = getattr(models, model_name)(pretrained=True)
         self.model = nn.Sequential(*list(pretrained_model.children())[: -1]).to(device=self.device, dtype=self.dtype)  # Chop off last classifier layer
-        self.model.eval()
+        # self.model.eval()
+        for param in self.model.parameters():
+            param.requires_grad = False
         self.output_shape = tuple(self.model(torch.randn((1, 3, 224, 224), device=self.device, dtype=self.dtype)).shape[1:])
         if fine_tune:
             self.model.train()
