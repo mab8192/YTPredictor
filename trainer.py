@@ -191,6 +191,7 @@ class Predictor:
         diff = predict - actual
         diff = np.random.choice(diff, size=min(5000, diff.size), replace=False)
         print(f'Stats of difference between prediction and actual:')
+        print(f'Median: {np.median(diff)}')
         print(f'Mean: {np.mean(diff)}')
         print(f'Standard Deviation: {np.std(diff)}')
         print(f'Variance: {np.var(diff)}')
@@ -227,11 +228,11 @@ if __name__ == '__main__':
     device = get_device()
     # device = torch.device('cpu')
     my_model = ViewCountPredictor(device=device, dtype=dtype)
-    # base = '/home/corbin/Desktop/school/fall2021/deep/finalproject/YTPredictor'
-    # my_model.load_state_dict(torch.load(base + '/model_checkpoints/model_10.pth'))
+    base = '/home/corbin/Desktop/school/fall2021/deep/finalproject/YTPredictor'
+    my_model.load_state_dict(torch.load(base + '/model_checkpoints/model_10.pth'))
     data = ThumbnailDataset(root="./youtube_api/", transforms=image_transforms['train'])
     test_data, train_data, val_data = get_dataloader_splits(data, batch_size=32, train_percent=0.7, val_percent=0.15, test_percent=0.15)
-    learning_rate, lr_decay = 0.1, 0.99
+    learning_rate, lr_decay = 0.05, 0.5
     optimizer = optim.Adam(filter(lambda p: p.requires_grad, my_model.parameters()), learning_rate) # leave betas and eps by default
     lr_scheduler = optim.lr_scheduler.LambdaLR(optimizer, lambda epoch: lr_decay ** epoch)
     trainer = Trainer(model=my_model, train_data=train_data, val_data=val_data, optimizer=optimizer,
