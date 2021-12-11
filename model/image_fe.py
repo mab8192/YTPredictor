@@ -29,18 +29,3 @@ class ImageFeatureExtractor(nn.Module):
 
     def forward(self, x):
         return self.model(x).type(self.dtype)
-
-
-if __name__ == '__main__':
-    import pathlib
-
-    from dataset import ThumbnailDataset
-    from model.yt_transformers import image_transforms
-    my_model = ImageFeatureExtractor()
-
-    data = ThumbnailDataset(root=str(pathlib.Path(__file__).parent.resolve()) + '/../youtube_api/',
-                            transforms=image_transforms['train'])
-    img = data[0][0].reshape((1, *data[0][0].shape))
-    print(f'{img.shape=}')
-    feature = my_model(img)
-    print(f'{feature.shape=}')

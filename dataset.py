@@ -61,9 +61,3 @@ class ThumbnailDataset(torch.utils.data.Dataset):
         for key in bad_keys:
             self.video_data.pop(key)
             self.imgs.remove(f'{key}.jpg')
-
-
-if __name__ == '__main__':
-    from model.yt_transformers import image_transforms
-    data = ThumbnailDataset(root=str(pathlib.Path(__file__).parent.resolve()) + '/youtube_api/',
-                            transforms=image_transforms['train'])
